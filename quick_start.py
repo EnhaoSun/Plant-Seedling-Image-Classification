@@ -220,10 +220,9 @@ torch.save(net.model.state_dict(), f=os.path.join(model_save_dir, "{}_{}".format
 
 
 
-#net.train(1)
+net.train(30)
 
 '''
->>>>>>> 8a475e410543340a4681a5ab0c45f7007f544025
 # predict test file labels
 test_dict = np.load("data/plant-test-data.npz")
 train_info_dict = np.load("data/plant-train-info.npz")
@@ -241,7 +240,6 @@ print(predict_names[:10])
 
 
 # classify test_files to different sub_folders
-<<<<<<< HEAD
 '''
 
 '''
@@ -263,7 +261,6 @@ copy2sub_folders(test_file_paths, predict_names, save_folder)
 print(os.listdir("../working/tmp/predict"))
 
 
-# In[ ]:
 
 
 # Create a predict submission file.
@@ -284,7 +281,6 @@ df.to_csv("predict_submission.csv", index=False)
 print(df)
 
 
-# In[ ]:
 
 
 # delect temporary working folder before Kaggle Commit.
