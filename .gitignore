@@ -1,0 +1,4 @@
+*.out
+*.npz
+data/
+models/
