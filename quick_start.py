@@ -9,6 +9,7 @@ import torch
 import torchvision
 from torchvision.datasets import ImageFolder
 import argparse
+from sklearn.metrics import accuracy_score
 
 # get_ipython().run_line_magic('matplotlib', 'inline')
 
@@ -216,76 +217,38 @@ for param_tensor in net.model.state_dict():
 #save state at prespecified filepath
 model_save_dir = "models"
 model_idx = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-torch.save(net.model.state_dict(), f=os.path.join(model_save_dir, "{}_{}".format(args.model_save_name, str(model_idx))))
 
 
 
-net.train(30)
+#net.train(1)
 
-'''
+
 # predict test file labels
 test_dict = np.load("data/plant-test-data.npz")
 train_info_dict = np.load("data/plant-train-info.npz")
 
 test_set = ImageDataset(test_dict["data"], test_dict["labels"])
 test_loader = torch.utils.data.DataLoader(test_set, batch_size=40)
-label_names = train_info_dict["label_names"]
 
 test_predict = net.predict_index(test_loader)
-predict_names = [label_names[i] for i in test_predict]
 
+#label_names = train_info_dict["label_names"]
+#label_names = np.reshape(label_names,1)
+#predict_names = [label_names[0].get(i) for i in test_predict]
+
+print(test_set.y_data[:10])
 print(test_predict[:10])
-print(predict_names[:10])
 
+y_true = test_set.y_data
+y_pred = test_predict
 
+accuracy = accuracy_score(y_true, y_pred)
+print(accuracy)
 
-# classify test_files to different sub_folders
+#torch.save(net.model.state_dict(), f=os.path.join(model_save_dir, "{}_{}".format(args.model_save_name, str(model_idx))))
+
 '''
-
-'''
-test_file_paths = test_info_dict["file_paths"]
-save_folder = "../working/tmp/predict"
-
-def make_dirs(path):
-    if not os.path.exists(path):
-        os.makedirs(path)
-
-def copy2sub_folders(source_file_paths, sub_folder_names, to_folder):
-    for i in tqdm(range(len(source_file_paths))):
-        file_dir = os.path.join(to_folder, sub_folder_names[i])
-        make_dirs(file_dir)
-        shutil.copy2(source_file_paths[i], file_dir)
-        
-copy2sub_folders(test_file_paths, predict_names, save_folder)
-
-print(os.listdir("../working/tmp/predict"))
-
-
-
-
-# Create a predict submission file.
-
-def folder_file_info(root):
-    folder_file_list = []
-    path_dirs = os.listdir(root)
-    for folder in path_dirs:
-        dir_files = os.listdir(os.path.join(root, folder))
-        for file_name in dir_files:
-            folder_file_list.append([file_name, folder])
-    return folder_file_list
-
-
-file_predict_table = folder_file_info("../working/tmp/predict")
 df = pd.DataFrame(file_predict_table, columns=['file', 'species'])
-df.to_csv("predict_submission.csv", index=False)
+df.to_csv("prediction.csv", index=False)
 print(df)
-
-
-
-
-# delect temporary working folder before Kaggle Commit.
-if os.path.exists("../working/tmp"):
-    shutil.rmtree("../working/tmp")
-
-os.listdir("../working")
 '''
