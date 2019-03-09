@@ -214,10 +214,10 @@ net.valid_loader = valid_loader
 #save state at prespecified filepath
 model_save_dir = "models"
 model_idx = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
-
 f_model=os.path.join(model_save_dir, "{}_{}".format(args.model_name, str(model_idx)))
 f_prediction=os.path.join(model_save_dir, "{}_{}".format("prediction", str(model_idx))) + ".csv"
-#net.train(1)
+
+net.train(30)
 torch.save(net.model.state_dict(), f_model)
 
 # predict test file labels

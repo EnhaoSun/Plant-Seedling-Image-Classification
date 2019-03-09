@@ -34,4 +34,4 @@ export DATASET_DIR=${TMP}/datasets/
 
 
 source /home/${STUDENT_ID}/miniconda3/bin/activate mlp
-python quick_start.py --model_save_name "AlexNet"
+python quick_start.py --model_name "AlexNet"
