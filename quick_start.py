@@ -14,10 +14,9 @@ from sklearn.metrics import accuracy_score
 # get_ipython().run_line_magic('matplotlib', 'inline')
 
 parser = argparse.ArgumentParser(description='Process some integers.')
-parser.add_argument("--model_save_name", help="specify model name to save")
+parser.add_argument("--model_name", help="specify model name to save")
 args = parser.parse_args()
 
-print("This quick start")
 if_gpu = torch.cuda.is_available()
 print("GPU is on?", if_gpu)
 
@@ -44,7 +43,7 @@ train_dict = np.load("data/plant-train-data.npz")
 whole_dataset = ImageDataset(train_dict["data"], train_dict["labels"])
 
 print(whole_dataset[0][0].shape)
-print(whole_dataset[4610])
+#print(whole_dataset[4610])
 
 # subset the whole train set for accuracy check while training.
 def array_random_pick(array, pick_num):
@@ -59,8 +58,8 @@ train_set = torch.utils.data.Subset(whole_dataset, train_mask)
 valid_set = torch.utils.data.Subset(whole_dataset, valid_mask)
 
 print(len(train_set),len(valid_set))
-print(train_set[4010])
-print(valid_set[401])
+#print(train_set[4010])
+#print(valid_set[401])
 
 # Use DataLoader to group data batchs. Here use size 4 for a batch.
 # DataLoader will return a iterator.
@@ -68,8 +67,8 @@ train_loader = torch.utils.data.DataLoader(train_set, batch_size=5)
 load_iter = iter(train_loader)
 one_batch_x, one_batch_y = next(load_iter)
 
-print(one_batch_y)
-print(one_batch_x.shape)
+#print(one_batch_y)
+#print(one_batch_x.shape)
 
 
 # Use PyTorch's built-in model to generate AlexNet with classes 12.
@@ -77,8 +76,8 @@ print(one_batch_x.shape)
 
 alex = torchvision.models.AlexNet(num_classes = 12)
 alex_out = alex(one_batch_x)
-print(alex_out.shape)
-print(alex_out)
+#print(alex_out.shape)
+#print(alex_out)
 
 
 # We use the max index of alex_out to
@@ -88,10 +87,12 @@ predict = torch.argmax(alex_out, dim = 1)
 compare = predict == one_batch_y
 accuracy = compare.sum() / len(predict)
 
+'''
 print(predict)
 print(one_batch_y)
 print(compare)
 print("accuracy =", accuracy.data.numpy())
+'''
 
 # Print model's state_dict
 
@@ -210,18 +211,14 @@ net.train_loader = train_loader
 net.sub_train_loader = train_loader
 net.valid_loader = valid_loader
 
-print("Net's state_dict:")
-for param_tensor in net.model.state_dict():
-    print(param_tensor, "\t", net.model.state_dict()[param_tensor].size())
-
 #save state at prespecified filepath
 model_save_dir = "models"
 model_idx = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 
-
-
+f_model=os.path.join(model_save_dir, "{}_{}".format(args.model_name, str(model_idx)))
+f_prediction=os.path.join(model_save_dir, "{}_{}".format("prediction", str(model_idx))) + ".csv"
 #net.train(1)
-
+torch.save(net.model.state_dict(), f_model)
 
 # predict test file labels
 test_dict = np.load("data/plant-test-data.npz")
@@ -243,12 +240,11 @@ y_true = test_set.y_data
 y_pred = test_predict
 
 accuracy = accuracy_score(y_true, y_pred)
-print(accuracy)
+accuracy = np.reshape(accuracy,1)
+print("accuracy: " + accuracy)
 
-#torch.save(net.model.state_dict(), f=os.path.join(model_save_dir, "{}_{}".format(args.model_save_name, str(model_idx))))
 
+df = pd.DataFrame(accuracy, columns=['test_acc'])
+df.to_csv(f_prediction, index=False)
 '''
-df = pd.DataFrame(file_predict_table, columns=['file', 'species'])
-df.to_csv("prediction.csv", index=False)
-print(df)
 '''
