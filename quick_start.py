@@ -109,7 +109,7 @@ class BaseNetPyTorch:
         self.loss_function = None
 
         if_gpu = torch.cuda.is_available()
-        self.device_gpu = torch.device("cuda:1" if if_gpu else "cpu")
+        self.device_gpu = torch.device("cuda:0" if if_gpu else "cpu")
 
     def train_loss(self):
         # "training" mode for Dropout etc.
@@ -241,7 +241,7 @@ y_pred = test_predict
 
 accuracy = accuracy_score(y_true, y_pred)
 accuracy = np.reshape(accuracy,1)
-print("accuracy: " + accuracy)
+print(accuracy)
 
 
 df = pd.DataFrame(accuracy, columns=['test_acc'])
