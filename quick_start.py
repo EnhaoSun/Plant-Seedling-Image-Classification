@@ -9,20 +9,16 @@ import torch
 import torchvision
 from torchvision.datasets import ImageFolder
 import argparse
-from sklearn.metrics import accuracy_score
-
-# get_ipython().run_line_magic('matplotlib', 'inline')
+#from sklearn.metrics import accuracy_score
 
 parser = argparse.ArgumentParser(description='Process some integers.')
 parser.add_argument("--model_name", help="specify model name to save")
 args = parser.parse_args()
-
 if_gpu = torch.cuda.is_available()
 print("GPU is on?", if_gpu)
 
 
 # Define a dataset
-
 class ImageDataset(torch.utils.data.Dataset):
     def __init__(self, x_data, y_data):
         self.x_data = x_data
@@ -38,7 +34,6 @@ class ImageDataset(torch.utils.data.Dataset):
 # Note that torchvision.transforms.ToTensor() will
 # Converts a PIL Image or numpy.ndarray (H x W x C) in the range
 # [0, 255] to a torch.FloatTensor of shape (C x H x W) in the range [0.0, 1.0].
-
 train_dict = np.load("data/plant-train-data.npz")
 whole_dataset = ImageDataset(train_dict["data"], train_dict["labels"])
 
@@ -74,16 +69,25 @@ one_batch_x, one_batch_y = next(load_iter)
 # Use PyTorch's built-in model to generate AlexNet with classes 12.
 # With input data of size [4, 3, 224, 224], AlexNet will output data of size [4, 12].
 
-alex = torchvision.models.AlexNet(num_classes = 12)
-alex_out = alex(one_batch_x)
-#print(alex_out.shape)
-#print(alex_out)
+if (args.model_name == 'AlexNet'):
+    model = torchvision.models.AlexNet(num_classes = 12)
+    out = model(one_batch_x)
+elif (args.model_name == 'Inception3'):
+    pass
+    # model = torchvision.models.Inception3(num_classes = 12)
+    # out = model(one_batch_x)
+else:
+    print
+    exit(1)
+
+#print(out.shape)
+#print(out)
 
 
-# We use the max index of alex_out to
+# We use the max index of out to
 # evaluate the accuracy of model predict.
 # Now the accuracy is zero before model train.
-predict = torch.argmax(alex_out, dim = 1)
+predict = torch.argmax(out, dim = 1)
 compare = predict == one_batch_y
 accuracy = compare.sum() / len(predict)
 
@@ -204,7 +208,7 @@ net.valid_loader = valid_loader
 
 #save state at prespecified filepath
 model_save_dir = "models"
-model_idx = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+model_idx = time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime(time.time()))
 f_model=os.path.join(model_save_dir, "{}_{}".format(args.model_name, str(model_idx)))
 f_prediction=os.path.join(model_save_dir, "{}_{}".format("prediction", str(model_idx))) + ".csv"
 
