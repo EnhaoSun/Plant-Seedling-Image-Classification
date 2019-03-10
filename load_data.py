@@ -41,7 +41,7 @@ print(os.listdir("../working/tmp/test/test_images")[:6])
 
 # Read and resize images to [224, 224].
 
-def read_image_folder(resize_shape, image_folder):
+def read_image_folder(resize_shape, image_folder, is_test):
     resize = torchvision.transforms.Resize(resize_shape)
     image_folder = ImageFolder(image_folder, transform=resize)
 
@@ -60,7 +60,10 @@ def read_image_folder(resize_shape, image_folder):
     i = 0
     for image, label in tqdm(image_folder, desc="Reading Images"):
         data[i] = np.array(image)
-        labels[i] = label
+        if is_test:
+            labels[i] = 11
+        else:
+            labels[i] = label
         i += 1
 
     data_dict = {"data": data, "labels": labels, 'data_shape': image_shape}
@@ -68,12 +71,12 @@ def read_image_folder(resize_shape, image_folder):
 
     return data_dict, info_dict
 
-train_dict, train_info_dict = read_image_folder((224,224),"./data/train")
-test_dict, test_info_dict = read_image_folder((224,224),"../working/tmp/test/")
+#train_dict, train_info_dict = read_image_folder((224,224),"./data/train", false)
+test_dict, test_info_dict = read_image_folder((224,224),"../working/tmp/test/", true)
 
-np.savez("plant-train-data", **train_dict)
-np.savez("plant-train-info", **train_info_dict)
-np.savez("plant-test-data", **test_dict)
-np.savez("plant-test-info", **test_info_dict)
+#np.savez("plant-train-data", **train_dict)
+#np.savez("plant-train-info", **train_info_dict)
+np.savez("./data/plant-test-data", **test_dict)
+np.savez("./data/plant-test-info", **test_info_dict)
 
 

@@ -87,15 +87,6 @@ predict = torch.argmax(alex_out, dim = 1)
 compare = predict == one_batch_y
 accuracy = compare.sum() / len(predict)
 
-'''
-print(predict)
-print(one_batch_y)
-print(compare)
-print("accuracy =", accuracy.data.numpy())
-'''
-
-# Print model's state_dict
-
 
 # define a base utility to train a net.
 class BaseNetPyTorch:
@@ -217,21 +208,16 @@ model_idx = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
 f_model=os.path.join(model_save_dir, "{}_{}".format(args.model_name, str(model_idx)))
 f_prediction=os.path.join(model_save_dir, "{}_{}".format("prediction", str(model_idx))) + ".csv"
 
-net.train(30)
-torch.save(net.model.state_dict(), f_model)
+#net.train(30)
+#torch.save(net.model.state_dict(), f_model)
 
 # predict test file labels
 test_dict = np.load("data/plant-test-data.npz")
-train_info_dict = np.load("data/plant-train-info.npz")
 
 test_set = ImageDataset(test_dict["data"], test_dict["labels"])
 test_loader = torch.utils.data.DataLoader(test_set, batch_size=40)
 
 test_predict = net.predict_index(test_loader)
-
-#label_names = train_info_dict["label_names"]
-#label_names = np.reshape(label_names,1)
-#predict_names = [label_names[0].get(i) for i in test_predict]
 
 print(test_set.y_data[:10])
 print(test_predict[:10])
@@ -245,6 +231,6 @@ print(accuracy)
 
 
 df = pd.DataFrame(accuracy, columns=['test_acc'])
-df.to_csv(f_prediction, index=False)
+#df.to_csv(f_prediction, index=False)
 '''
 '''
