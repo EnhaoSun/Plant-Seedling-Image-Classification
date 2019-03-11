@@ -137,10 +137,11 @@ class BaseNetPyTorch:
         y_true = test_set.y_data
         y_pred = test_predict
         test_acc = accuracy_score(y_true, y_pred)
-        d = {'train_acc': train_acc, 'valid_acc':valid_acc, 'test_acc':test_acc}
-        #df = pd.DataFrame(train_acc, valid_acc, test_acc, columns=['train_acc', 'valid_acc', 'test_acc'])
+        d =  [train_acc, valid_acc, test_acc]
+        #df = pd.DataFrame([train_acc, valid_acc, test_acc], columns=['train_acc', 'valid_acc', 'test_acc'])
         df = pd.DataFrame(data=d)
-        df.to_csv(path, index=False)
+        with open(path, 'a') as f:
+            df.to_csv(f, header=False)
 
 
     def train(self, num_epochs=1):
