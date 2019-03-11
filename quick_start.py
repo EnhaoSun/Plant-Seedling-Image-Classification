@@ -9,11 +9,12 @@ import torch
 import torchvision
 from torchvision.datasets import ImageFolder
 import argparse
-#from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score
 
 parser = argparse.ArgumentParser(description='Process some integers.')
 parser.add_argument("--model_name", help="specify model name to save")
 parser.add_argument("--size", help="specify image size")
+parser.add_argument("--epoch", help="specify epoch number")
 args = parser.parse_args()
 if_gpu = torch.cuda.is_available()
 print("GPU is on?", if_gpu)
@@ -38,9 +39,18 @@ class ImageDataset(torch.utils.data.Dataset):
 
 size = args.size
 train_dict = np.load("data/" + str(size) + "/plant-train-data.npz")
-whole_dataset = ImageDataset(train_dict["data"], train_dict["labels"])
+#modify dataset
+whole_dataset = ImageDataset(train_dict["data"][:10], train_dict["labels"][:10])
+#whole_dataset = ImageDataset(train_dict["data"], train_dict["labels"])
 
-print(whole_dataset[0][0].shape)
+test_dict = np.load("data/" + str(size) + "/plant-test-data.npz")
+test_set = ImageDataset(test_dict["data"], test_dict["labels"])
+test_loader = torch.utils.data.DataLoader(test_set, batch_size=40)
+
+model_save_dir = "models"
+test_save_dir = "acc"
+model_idx = time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime(time.time()))
+f_prediction=os.path.join(test_save_dir, "{}_{}_{}_{}".format("test",args.model_name,args.size, str(model_idx)))
 
 # subset the whole train set for accuracy check while training.
 def array_random_pick(array, pick_num):
@@ -49,7 +59,9 @@ def array_random_pick(array, pick_num):
     unpick = np.equal(np.in1d(index, pick), False)
     return array[unpick], array[pick]
 
-train_mask, valid_mask = array_random_pick(np.arange(len(whole_dataset)), 500)
+#modify dataset
+train_mask, valid_mask = array_random_pick(np.arange(len(whole_dataset)), 5)
+#train_mask, valid_mask = array_random_pick(np.arange(len(whole_dataset)), 500)
 
 train_set = torch.utils.data.Subset(whole_dataset, train_mask)
 valid_set = torch.utils.data.Subset(whole_dataset, valid_mask)
@@ -120,6 +132,17 @@ class BaseNetPyTorch:
         accuracy = float(num_correct) / float(num_samples)
         return num_correct, num_samples, accuracy
 
+    def test(self, path, train_acc, valid_acc):
+        test_predict = self.predict_index(test_loader)
+        y_true = test_set.y_data
+        y_pred = test_predict
+        test_acc = accuracy_score(y_true, y_pred)
+        d = {'train_acc': train_acc, 'valid_acc':valid_acc, 'test_acc':test_acc}
+        #df = pd.DataFrame(train_acc, valid_acc, test_acc, columns=['train_acc', 'valid_acc', 'test_acc'])
+        df = pd.DataFrame(data=d)
+        df.to_csv(path, index=False)
+
+
     def train(self, num_epochs=1):
         if self.model is None:
             raise ValueError("self.model is None! Please assign it.")
@@ -160,6 +183,10 @@ class BaseNetPyTorch:
                 print("Model Overfit 30.00%, stopped.")
                 return True
 
+            self.test(f_prediction, train_acc, valid_acc)
+            if epoch % 10 == 0 and epoch != 0: 
+                f_model=os.path.join(model_save_dir, "{}_{}_{}_{}".format(args.model_name,args.size,str(epoch), str(model_idx)))
+                torch.save(net.model.state_dict(), f_model)
         return True
 
 
@@ -185,33 +212,21 @@ net.sub_train_loader = train_loader
 net.valid_loader = valid_loader
 
 #save state at prespecified filepath
-model_save_dir = "models"
-model_idx = time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime(time.time()))
-f_model=os.path.join(model_save_dir, "{}_{}".format(args.model_name, str(model_idx)))
-f_prediction=os.path.join(model_save_dir, "{}_{}".format("prediction", str(model_idx))) + ".csv"
+f_model=os.path.join(model_save_dir, "{}_{}_{}_{}".format(args.model_name,args.size,args.epoch, str(model_idx)))
 
 print(f_model);
-net.train(30)
-torch.save(net.model.state_dict(), f_model)
-
+net.train(int(args.epoch))
 # predict test file labels
-test_dict = np.load("data/" + str(size) + "/plant-test-data.npz")
-test_set = ImageDataset(test_dict["data"], test_dict["labels"])
-test_loader = torch.utils.data.DataLoader(test_set, batch_size=40)
+
+'''
+def test(self, path):
 test_predict = net.predict_index(test_loader)
-
-print(test_set.y_data[:10])
-print(test_predict[:10])
-
 y_true = test_set.y_data
 y_pred = test_predict
-
 accuracy = accuracy_score(y_true, y_pred)
 accuracy = np.reshape(accuracy,1)
 print(accuracy)
-
-
 df = pd.DataFrame(accuracy, columns=['test_acc'])
 df.to_csv(f_prediction, index=False)
-'''
+
 '''
