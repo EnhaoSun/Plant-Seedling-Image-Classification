@@ -2,3 +2,5 @@
 *.npz
 data/
 models/
+acc/
+*.csv
