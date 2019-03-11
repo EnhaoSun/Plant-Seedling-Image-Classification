@@ -9,7 +9,7 @@ import torch
 import torchvision
 from torchvision.datasets import ImageFolder
 import argparse
-from sklearn.metrics import accuracy_score
+#from sklearn.metrics import accuracy_score
 
 parser = argparse.ArgumentParser(description='Process some integers.')
 parser.add_argument("--model_name", help="specify model name to save")
@@ -61,33 +61,6 @@ print(len(train_set),len(valid_set))
 train_loader = torch.utils.data.DataLoader(train_set, batch_size=5)
 load_iter = iter(train_loader)
 one_batch_x, one_batch_y = next(load_iter)
-
-
-# Use PyTorch's built-in model to generate AlexNet with classes 12.
-# With input data of size [4, 3, 224, 224], AlexNet will output data of size [4, 12].
-
-if (args.model_name == 'AlexNet'):
-    model = torchvision.models.AlexNet(num_classes = 12)
-    out = model(one_batch_x)
-elif (args.model_name == 'Inception3'):
-    pass
-    # model = torchvision.models.Inception3(num_classes = 12)
-    # out = model(one_batch_x)
-else:
-    print
-    exit(1)
-
-#print(out.shape)
-#print(out)
-
-
-# We use the max index of out to
-# evaluate the accuracy of model predict.
-# Now the accuracy is zero before model train.
-predict = torch.argmax(out, dim = 1)
-compare = predict == one_batch_y
-accuracy = compare.sum() / len(predict)
-
 
 # define a base utility to train a net.
 class BaseNetPyTorch:
@@ -195,10 +168,16 @@ train_loader = torch.utils.data.DataLoader(train_set, batch_size=40, shuffle=Tru
 valid_loader = torch.utils.data.DataLoader(valid_set, batch_size=40)
 
 net = BaseNetPyTorch()
-net.model = torchvision.models.AlexNet(num_classes=12)
+if (args.model_name == 'AlexNet'):
+    net.model = torchvision.models.AlexNet(num_classes=12)
+elif (args.model_name == 'Inception3'):
+    net.model = torchvision.models.Inception3(num_classes=12, aux_logits=False)
+else:
+    print("specify --model_name")
+    exit(1)
+
 net.optimize_method = torch.optim.Adam(net.model.parameters(), lr=0.0001)
 net.loss_function = torch.nn.CrossEntropyLoss()
-
 net.train_loader = train_loader
 net.sub_train_loader = train_loader
 net.valid_loader = valid_loader
@@ -209,16 +188,18 @@ model_idx = time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime(time.time()))
 f_model=os.path.join(model_save_dir, "{}_{}".format(args.model_name, str(model_idx)))
 f_prediction=os.path.join(model_save_dir, "{}_{}".format("prediction", str(model_idx))) + ".csv"
 
-net.train(100)
+print(f_model);
+net.train(30)
 torch.save(net.model.state_dict(), f_model)
 
 # predict test file labels
 test_dict = np.load("data/" + str(size) + "/plant-test-data.npz")
-
 test_set = ImageDataset(test_dict["data"], test_dict["labels"])
 test_loader = torch.utils.data.DataLoader(test_set, batch_size=40)
-
 test_predict = net.predict_index(test_loader)
+
+print(test_set.y_data[:10])
+print(test_predict[:10])
 
 y_true = test_set.y_data
 y_pred = test_predict
