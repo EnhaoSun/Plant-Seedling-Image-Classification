@@ -52,17 +52,12 @@ train_set = torch.utils.data.Subset(whole_dataset, train_mask)
 valid_set = torch.utils.data.Subset(whole_dataset, valid_mask)
 
 print(len(train_set),len(valid_set))
-#print(train_set[4010])
-#print(valid_set[401])
 
 # Use DataLoader to group data batchs. Here use size 4 for a batch.
 # DataLoader will return a iterator.
 train_loader = torch.utils.data.DataLoader(train_set, batch_size=5)
 load_iter = iter(train_loader)
 one_batch_x, one_batch_y = next(load_iter)
-
-#print(one_batch_y)
-#print(one_batch_x.shape)
 
 
 # Use PyTorch's built-in model to generate AlexNet with classes 12.
