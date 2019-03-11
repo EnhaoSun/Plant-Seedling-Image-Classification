@@ -13,6 +13,7 @@ import argparse
 
 parser = argparse.ArgumentParser(description='Process some integers.')
 parser.add_argument("--model_name", help="specify model name to save")
+parser.add_argument("--size", help="specify image size")
 args = parser.parse_args()
 if_gpu = torch.cuda.is_available()
 print("GPU is on?", if_gpu)
@@ -34,7 +35,9 @@ class ImageDataset(torch.utils.data.Dataset):
 # Note that torchvision.transforms.ToTensor() will
 # Converts a PIL Image or numpy.ndarray (H x W x C) in the range
 # [0, 255] to a torch.FloatTensor of shape (C x H x W) in the range [0.0, 1.0].
-train_dict = np.load("data/plant-train-data.npz")
+
+size = args.size
+train_dict = np.load("data/" + str(size) + "/plant-train-data.npz")
 whole_dataset = ImageDataset(train_dict["data"], train_dict["labels"])
 
 print(whole_dataset[0][0].shape)
@@ -232,12 +235,9 @@ net.train(30)
 torch.save(net.model.state_dict(), f_model)
 
 # predict test file labels
-test_dict = np.load("data/plant-test-data.npz")
-train_info_dict = np.load("data/plant-train-info.npz")
-
+test_dict = np.load("data/" + str(size) + "/plant-test-data.npz")
 test_set = ImageDataset(test_dict["data"], test_dict["labels"])
 test_loader = torch.utils.data.DataLoader(test_set, batch_size=40)
-
 test_predict = net.predict_index(test_loader)
 
 #label_names = train_info_dict["label_names"]
