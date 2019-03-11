@@ -9,7 +9,7 @@ import torch
 import torchvision
 from torchvision.datasets import ImageFolder
 import argparse
-#from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score
 
 parser = argparse.ArgumentParser(description='Process some integers.')
 parser.add_argument("--model_name", help="specify model name to save")
@@ -41,7 +41,6 @@ train_dict = np.load("data/" + str(size) + "/plant-train-data.npz")
 whole_dataset = ImageDataset(train_dict["data"], train_dict["labels"])
 
 print(whole_dataset[0][0].shape)
-#print(whole_dataset[4610])
 
 # subset the whole train set for accuracy check while training.
 def array_random_pick(array, pick_num):
@@ -215,8 +214,8 @@ model_idx = time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime(time.time()))
 f_model=os.path.join(model_save_dir, "{}_{}".format(args.model_name, str(model_idx)))
 f_prediction=os.path.join(model_save_dir, "{}_{}".format("prediction", str(model_idx))) + ".csv"
 
-#net.train(30)
-#torch.save(net.model.state_dict(), f_model)
+net.train(100)
+torch.save(net.model.state_dict(), f_model)
 
 # predict test file labels
 test_dict = np.load("data/" + str(size) + "/plant-test-data.npz")
@@ -225,9 +224,6 @@ test_set = ImageDataset(test_dict["data"], test_dict["labels"])
 test_loader = torch.utils.data.DataLoader(test_set, batch_size=40)
 
 test_predict = net.predict_index(test_loader)
-
-print(test_set.y_data[:10])
-print(test_predict[:10])
 
 y_true = test_set.y_data
 y_pred = test_predict
@@ -238,6 +234,6 @@ print(accuracy)
 
 
 df = pd.DataFrame(accuracy, columns=['test_acc'])
-#df.to_csv(f_prediction, index=False)
+df.to_csv(f_prediction, index=False)
 '''
 '''
