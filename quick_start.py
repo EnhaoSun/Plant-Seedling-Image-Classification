@@ -211,9 +211,12 @@ valid_loader = torch.utils.data.DataLoader(valid_set, batch_size=40)
 
 net = BaseNetPyTorch()
 if (args.model_name == 'AlexNet'):
-    net.model = torchvision.models.AlexNet(num_classes=12)
+    net.model = torchvision.models.alexnet(num_classes=12)
 elif (args.model_name == 'Inception3'):
-    net.model = torchvision.models.Inception3(num_classes=12)
+    net.model = torchvision.models.inception_v3(num_classes=12, aux_logits=False)
+elif (args.model_name == 'VGG'):
+    net.model = torchvision.models.vgg16(num_classes=12)
+    
 else:
     print("specify --model_name")
     exit(1)
