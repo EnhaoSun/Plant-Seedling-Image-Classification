@@ -41,7 +41,6 @@ train_dict = np.load("data/" + str(size) + "/plant-train-data.npz")
 whole_dataset = ImageDataset(train_dict["data"], train_dict["labels"])
 
 print(whole_dataset[0][0].shape)
-#print(whole_dataset[4610])
 
 # subset the whole train set for accuracy check while training.
 def array_random_pick(array, pick_num):
@@ -56,52 +55,12 @@ train_set = torch.utils.data.Subset(whole_dataset, train_mask)
 valid_set = torch.utils.data.Subset(whole_dataset, valid_mask)
 
 print(len(train_set),len(valid_set))
-#print(train_set[4010])
-#print(valid_set[401])
 
 # Use DataLoader to group data batchs. Here use size 4 for a batch.
 # DataLoader will return a iterator.
 train_loader = torch.utils.data.DataLoader(train_set, batch_size=5)
 load_iter = iter(train_loader)
 one_batch_x, one_batch_y = next(load_iter)
-
-#print(one_batch_y)
-#print(one_batch_x.shape)
-
-
-# Use PyTorch's built-in model to generate AlexNet with classes 12.
-# With input data of size [4, 3, 224, 224], AlexNet will output data of size [4, 12].
-
-# if (args.model_name == 'AlexNet'):
-#     model = torchvision.models.AlexNet(num_classes = 12)
-#     out = model(one_batch_x)
-# elif (args.model_name == 'Inception3'):
-#     pass
-#     # model = torchvision.models.Inception3(num_classes = 12)
-#     # out = model(one_batch_x)
-# else:
-#     print
-#     exit(1)
-
-#print(out.shape)
-#print(out)
-
-
-# We use the max index of out to
-# evaluate the accuracy of model predict.
-# Now the accuracy is zero before model train.
-#predict = torch.argmax(out, dim = 1)
-#compare = predict == one_batch_y
-#accuracy = compare.sum() / len(predict)
-
-'''
-print(predict)
-print(one_batch_y)
-print(compare)
-print("accuracy =", accuracy.data.numpy())
-'''
-
-# Print model's state_dict
 
 
 # define a base utility to train a net.
@@ -213,7 +172,7 @@ net = BaseNetPyTorch()
 if (args.model_name == 'AlexNet'):
     net.model = torchvision.models.AlexNet(num_classes=12)
 elif (args.model_name == 'Inception3'):
-    net.model = torchvision.models.Inception3(num_classes=12)
+    net.model = torchvision.models.Inception3(num_classes=12, aux_logits=False)
 else:
     print("specify --model_name")
     exit(1)
@@ -239,10 +198,6 @@ test_dict = np.load("data/" + str(size) + "/plant-test-data.npz")
 test_set = ImageDataset(test_dict["data"], test_dict["labels"])
 test_loader = torch.utils.data.DataLoader(test_set, batch_size=40)
 test_predict = net.predict_index(test_loader)
-
-#label_names = train_info_dict["label_names"]
-#label_names = np.reshape(label_names,1)
-#predict_names = [label_names[0].get(i) for i in test_predict]
 
 print(test_set.y_data[:10])
 print(test_predict[:10])
