@@ -204,7 +204,6 @@ elif (args.model_name == 'Inception3'):
 elif (args.model_name == 'VGG'):
     net.model = torchvision.models.vgg16(num_classes=12)
 else:
-    print("specify --model_name")
     exit(1)
 
 net.optimize_method = torch.optim.Adam(net.model.parameters(), lr=0.0001)
@@ -214,8 +213,5 @@ net.sub_train_loader = train_loader
 net.valid_loader = valid_loader
 
 #save state at prespecified filepath
-f_model=os.path.join(model_save_dir, "{}_{}_{}_{}".format(args.model_name,args.size,args.epoch, str(model_idx)))
-
-print(f_model);
 net.train(int(args.epoch))
 acc_file.close()
