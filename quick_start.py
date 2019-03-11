@@ -52,6 +52,11 @@ test_save_dir = "acc"
 model_idx = time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime(time.time()))
 f_prediction=os.path.join(test_save_dir, "{}_{}_{}_{}".format("test",args.model_name,args.size, str(model_idx)))
 
+# write header to acc file
+acc_file = open(f_prediction, "w")
+acc_file.write("train_acc,valid_acc,test_acc\n");
+
+
 # subset the whole train set for accuracy check while training.
 def array_random_pick(array, pick_num):
     index = np.arange(len(array))
@@ -139,10 +144,11 @@ class BaseNetPyTorch:
         test_acc = accuracy_score(y_true, y_pred)
         d =  [train_acc, valid_acc, test_acc]
         #df = pd.DataFrame([train_acc, valid_acc, test_acc], columns=['train_acc', 'valid_acc', 'test_acc'])
-        df = pd.DataFrame(data=d)
-        with open(path, 'a') as f:
-            df.to_csv(f, header=False)
-
+        # df = pd.DataFrame(data=d)
+        # with open(path, 'a') as f:
+        #     df.to_csv(f, header=False)
+        acc_file.write("{},{},{}\n".format(train_acc,valid_acc,test_acc));
+        
 
     def train(self, num_epochs=1):
         if self.model is None:
