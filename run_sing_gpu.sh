@@ -34,4 +34,4 @@ export DATASET_DIR=${TMP}/datasets/
 
 
 source /home/${STUDENT_ID}/miniconda3/bin/activate mlp
-python quick_start.py --model_name "AlexNet" --size 224
+python quick_start.py --model_name "Inception3" --size 224
