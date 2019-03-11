@@ -142,11 +142,6 @@ class BaseNetPyTorch:
         y_true = test_set.y_data
         y_pred = test_predict
         test_acc = accuracy_score(y_true, y_pred)
-        d =  [train_acc, valid_acc, test_acc]
-        #df = pd.DataFrame([train_acc, valid_acc, test_acc], columns=['train_acc', 'valid_acc', 'test_acc'])
-        # df = pd.DataFrame(data=d)
-        # with open(path, 'a') as f:
-        #     df.to_csv(f, header=False)
         acc_file.write("{},{},{}\n".format(train_acc,valid_acc,test_acc));
         
 
@@ -223,6 +218,7 @@ f_model=os.path.join(model_save_dir, "{}_{}_{}_{}".format(args.model_name,args.s
 
 print(f_model);
 net.train(int(args.epoch))
+acc_file.close()
 # predict test file labels
 
 '''
