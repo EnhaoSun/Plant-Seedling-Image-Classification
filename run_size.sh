@@ -46,7 +46,7 @@ do
 	for m in "${model[@]}"
 	do
 		echo $m
-		python quick_start.py --model_name $m --size $s --epoch 11
+		python quick_start.py --model_name $m --size $s --epoch 101
 	done
 done
 

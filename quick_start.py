@@ -40,8 +40,8 @@ class ImageDataset(torch.utils.data.Dataset):
 size = args.size
 train_dict = np.load("data/" + str(size) + "/plant-train-data.npz")
 #modify dataset
-whole_dataset = ImageDataset(train_dict["data"][:10], train_dict["labels"][:10])
-#whole_dataset = ImageDataset(train_dict["data"], train_dict["labels"])
+#whole_dataset = ImageDataset(train_dict["data"][:10], train_dict["labels"][:10])
+whole_dataset = ImageDataset(train_dict["data"], train_dict["labels"])
 
 test_dict = np.load("data/" + str(size) + "/plant-test-data.npz")
 test_set = ImageDataset(test_dict["data"], test_dict["labels"])
@@ -65,8 +65,8 @@ def array_random_pick(array, pick_num):
     return array[unpick], array[pick]
 
 #modify dataset
-train_mask, valid_mask = array_random_pick(np.arange(len(whole_dataset)), 5)
-#train_mask, valid_mask = array_random_pick(np.arange(len(whole_dataset)), 500)
+#train_mask, valid_mask = array_random_pick(np.arange(len(whole_dataset)), 5)
+train_mask, valid_mask = array_random_pick(np.arange(len(whole_dataset)), 500)
 
 train_set = torch.utils.data.Subset(whole_dataset, train_mask)
 valid_set = torch.utils.data.Subset(whole_dataset, valid_mask)
@@ -204,7 +204,6 @@ elif (args.model_name == 'Inception3'):
 elif (args.model_name == 'VGG'):
     net.model = torchvision.models.vgg16(num_classes=12)
 else:
-    print("specify --model_name")
     exit(1)
 
 net.optimize_method = torch.optim.Adam(net.model.parameters(), lr=0.0001)
@@ -214,22 +213,5 @@ net.sub_train_loader = train_loader
 net.valid_loader = valid_loader
 
 #save state at prespecified filepath
-f_model=os.path.join(model_save_dir, "{}_{}_{}_{}".format(args.model_name,args.size,args.epoch, str(model_idx)))
-
-print(f_model);
 net.train(int(args.epoch))
 acc_file.close()
-# predict test file labels
-
-'''
-def test(self, path):
-test_predict = net.predict_index(test_loader)
-y_true = test_set.y_data
-y_pred = test_predict
-accuracy = accuracy_score(y_true, y_pred)
-accuracy = np.reshape(accuracy,1)
-print(accuracy)
-df = pd.DataFrame(accuracy, columns=['test_acc'])
-df.to_csv(f_prediction, index=False)
-
-'''
