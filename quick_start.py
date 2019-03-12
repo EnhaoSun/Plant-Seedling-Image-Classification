@@ -45,7 +45,7 @@ whole_dataset = ImageDataset(train_dict["data"], train_dict["labels"])
 
 test_dict = np.load("data/" + str(size) + "/plant-test-data.npz")
 test_set = ImageDataset(test_dict["data"], test_dict["labels"])
-test_loader = torch.utils.data.DataLoader(test_set, batch_size=40)
+test_loader = torch.utils.data.DataLoader(test_set, batch_size=25)
 
 model_save_dir = "models"
 test_save_dir = "acc"
@@ -70,14 +70,7 @@ train_mask, valid_mask = array_random_pick(np.arange(len(whole_dataset)), 500)
 
 train_set = torch.utils.data.Subset(whole_dataset, train_mask)
 valid_set = torch.utils.data.Subset(whole_dataset, valid_mask)
-
 print(len(train_set),len(valid_set))
-
-# Use DataLoader to group data batchs. Here use size 4 for a batch.
-# DataLoader will return a iterator.
-train_loader = torch.utils.data.DataLoader(train_set, batch_size=5)
-load_iter = iter(train_loader)
-one_batch_x, one_batch_y = next(load_iter)
 
 # define a base utility to train a net.
 class BaseNetPyTorch:
@@ -193,8 +186,8 @@ class BaseNetPyTorch:
 
 
 # It is very important to turn on shuffle=True of training set
-train_loader = torch.utils.data.DataLoader(train_set, batch_size=40, shuffle=True)
-valid_loader = torch.utils.data.DataLoader(valid_set, batch_size=40)
+train_loader = torch.utils.data.DataLoader(train_set, batch_size=25, shuffle=True)
+valid_loader = torch.utils.data.DataLoader(valid_set, batch_size=25)
 
 net = BaseNetPyTorch()
 if (args.model_name == 'AlexNet'):
