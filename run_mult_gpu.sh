@@ -36,4 +36,4 @@ export DATASET_DIR=${TMP}/datasets/
 
 source /home/${STUDENT_ID}/miniconda3/bin/activate mlp
 
-python quick_start.py --model_name "VGG" --size 224 --epoch 12
+python quick_start.py --model_name "VGG" --size 224 --epoch 101

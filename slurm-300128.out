@@ -1,0 +1,454 @@
+224
+AlexNet
+GPU is on? True
+4208 500
+begin training, length_of_one_mini_batch : 106
+epoch:1/101 loss:2.3501|10s train_acc:(538/4208 12.79%)|4s valid_acc:(57/500 11.40%)|0s take:0min remain:26min
+epoch:2/101 loss:2.4348|8s train_acc:(1192/4208 28.33%)|4s valid_acc:(160/500 32.00%)|0s take:0min remain:23min
+epoch:3/101 loss:1.2529|8s train_acc:(1702/4208 40.45%)|4s valid_acc:(203/500 40.60%)|0s take:0min remain:23min
+epoch:4/101 loss:1.0175|8s train_acc:(2194/4208 52.14%)|4s valid_acc:(273/500 54.60%)|0s take:1min remain:23min
+epoch:5/101 loss:1.1537|8s train_acc:(2425/4208 57.63%)|4s valid_acc:(294/500 58.80%)|0s take:1min remain:23min
+epoch:6/101 loss:0.6606|8s train_acc:(2928/4208 69.58%)|4s valid_acc:(344/500 68.80%)|0s take:1min remain:22min
+epoch:7/101 loss:0.7866|8s train_acc:(3071/4208 72.98%)|4s valid_acc:(367/500 73.40%)|0s take:1min remain:22min
+epoch:8/101 loss:1.2921|8s train_acc:(3048/4208 72.43%)|4s valid_acc:(364/500 72.80%)|0s take:2min remain:22min
+epoch:9/101 loss:0.9275|8s train_acc:(3239/4208 76.97%)|4s valid_acc:(368/500 73.60%)|0s take:2min remain:22min
+epoch:10/101 loss:0.8238|8s train_acc:(3552/4208 84.41%)|4s valid_acc:(401/500 80.20%)|0s take:2min remain:22min
+epoch:11/101 loss:0.4506|8s train_acc:(3473/4208 82.53%)|4s valid_acc:(402/500 80.40%)|0s take:2min remain:21min
+epoch:12/101 loss:0.3522|8s train_acc:(3662/4208 87.02%)|5s valid_acc:(416/500 83.20%)|0s take:3min remain:22min
+epoch:13/101 loss:0.6844|8s train_acc:(3654/4208 86.83%)|5s valid_acc:(410/500 82.00%)|0s take:3min remain:21min
+epoch:14/101 loss:0.1578|8s train_acc:(3789/4208 90.04%)|5s valid_acc:(423/500 84.60%)|0s take:3min remain:21min
+epoch:15/101 loss:1.2051|8s train_acc:(3779/4208 89.81%)|5s valid_acc:(420/500 84.00%)|0s take:4min remain:21min
+epoch:16/101 loss:0.3871|8s train_acc:(3798/4208 90.26%)|5s valid_acc:(421/500 84.20%)|0s take:4min remain:20min
+epoch:17/101 loss:0.4386|8s train_acc:(3798/4208 90.26%)|5s valid_acc:(421/500 84.20%)|0s take:4min remain:20min
+epoch:18/101 loss:0.3615|8s train_acc:(3857/4208 91.66%)|5s valid_acc:(421/500 84.20%)|0s take:4min remain:20min
+epoch:19/101 loss:0.2118|8s train_acc:(3922/4208 93.20%)|5s valid_acc:(425/500 85.00%)|0s take:5min remain:20min
+epoch:20/101 loss:0.2789|8s train_acc:(3960/4208 94.11%)|5s valid_acc:(433/500 86.60%)|0s take:5min remain:20min
+epoch:21/101 loss:0.1525|8s train_acc:(3814/4208 90.64%)|5s valid_acc:(415/500 83.00%)|0s take:5min remain:19min
+epoch:22/101 loss:0.0285|8s train_acc:(4010/4208 95.29%)|5s valid_acc:(434/500 86.80%)|0s take:6min remain:19min
+epoch:23/101 loss:0.2596|8s train_acc:(3941/4208 93.65%)|5s valid_acc:(415/500 83.00%)|0s take:6min remain:19min
+epoch:24/101 loss:0.0564|8s train_acc:(4001/4208 95.08%)|5s valid_acc:(430/500 86.00%)|0s take:6min remain:18min
+epoch:25/101 loss:0.2098|8s train_acc:(4053/4208 96.32%)|5s valid_acc:(432/500 86.40%)|0s take:6min remain:18min
+epoch:26/101 loss:0.3238|8s train_acc:(3938/4208 93.58%)|5s valid_acc:(417/500 83.40%)|0s take:7min remain:18min
+epoch:27/101 loss:0.0605|8s train_acc:(4024/4208 95.63%)|5s valid_acc:(437/500 87.40%)|0s take:7min remain:18min
+epoch:28/101 loss:0.1605|8s train_acc:(4068/4208 96.67%)|5s valid_acc:(442/500 88.40%)|0s take:7min remain:18min
+epoch:29/101 loss:0.0064|8s train_acc:(4044/4208 96.10%)|5s valid_acc:(424/500 84.80%)|0s take:7min remain:17min
+epoch:30/101 loss:0.1767|8s train_acc:(3963/4208 94.18%)|5s valid_acc:(421/500 84.20%)|0s take:8min remain:17min
+epoch:31/101 loss:0.0035|8s train_acc:(4110/4208 97.67%)|5s valid_acc:(439/500 87.80%)|0s take:8min remain:17min
+epoch:32/101 loss:0.1399|8s train_acc:(4033/4208 95.84%)|5s valid_acc:(419/500 83.80%)|0s take:8min remain:17min
+epoch:33/101 loss:0.2364|8s train_acc:(3679/4208 87.43%)|5s valid_acc:(392/500 78.40%)|0s take:9min remain:16min
+epoch:34/101 loss:0.3125|8s train_acc:(4136/4208 98.29%)|5s valid_acc:(437/500 87.40%)|0s take:9min remain:16min
+epoch:35/101 loss:0.0212|8s train_acc:(4084/4208 97.05%)|5s valid_acc:(436/500 87.20%)|0s take:9min remain:16min
+epoch:36/101 loss:0.0272|8s train_acc:(4120/4208 97.91%)|5s valid_acc:(443/500 88.60%)|0s take:9min remain:16min
+epoch:37/101 loss:0.6526|8s train_acc:(4039/4208 95.98%)|5s valid_acc:(428/500 85.60%)|0s take:10min remain:15min
+epoch:38/101 loss:0.3568|8s train_acc:(4141/4208 98.41%)|5s valid_acc:(427/500 85.40%)|0s take:10min remain:15min
+epoch:39/101 loss:0.0874|8s train_acc:(4120/4208 97.91%)|5s valid_acc:(437/500 87.40%)|0s take:10min remain:15min
+epoch:40/101 loss:0.1213|8s train_acc:(4164/4208 98.95%)|5s valid_acc:(433/500 86.60%)|0s take:10min remain:15min
+epoch:41/101 loss:0.0018|8s train_acc:(4145/4208 98.50%)|5s valid_acc:(434/500 86.80%)|0s take:11min remain:14min
+epoch:42/101 loss:0.1356|8s train_acc:(4163/4208 98.93%)|5s valid_acc:(432/500 86.40%)|0s take:11min remain:14min
+epoch:43/101 loss:0.0016|8s train_acc:(4171/4208 99.12%)|5s valid_acc:(435/500 87.00%)|0s take:11min remain:14min
+epoch:44/101 loss:0.2297|8s train_acc:(4166/4208 99.00%)|5s valid_acc:(433/500 86.60%)|0s take:12min remain:14min
+epoch:45/101 loss:0.3305|8s train_acc:(4071/4208 96.74%)|5s valid_acc:(430/500 86.00%)|0s take:12min remain:13min
+epoch:46/101 loss:0.0557|8s train_acc:(4166/4208 99.00%)|5s valid_acc:(424/500 84.80%)|0s take:12min remain:13min
+epoch:47/101 loss:0.0014|8s train_acc:(4188/4208 99.52%)|5s valid_acc:(439/500 87.80%)|0s take:12min remain:13min
+epoch:48/101 loss:0.0041|8s train_acc:(4195/4208 99.69%)|5s valid_acc:(437/500 87.40%)|0s take:13min remain:13min
+epoch:49/101 loss:0.5719|8s train_acc:(4106/4208 97.58%)|5s valid_acc:(411/500 82.20%)|0s take:13min remain:12min
+epoch:50/101 loss:0.0086|8s train_acc:(4193/4208 99.64%)|5s valid_acc:(431/500 86.20%)|0s take:13min remain:12min
+epoch:51/101 loss:0.1118|8s train_acc:(4199/4208 99.79%)|5s valid_acc:(431/500 86.20%)|0s take:13min remain:12min
+epoch:52/101 loss:0.0059|8s train_acc:(4202/4208 99.86%)|5s valid_acc:(429/500 85.80%)|0s take:14min remain:12min
+epoch:53/101 loss:0.0027|8s train_acc:(4197/4208 99.74%)|5s valid_acc:(439/500 87.80%)|0s take:14min remain:11min
+epoch:54/101 loss:0.0040|8s train_acc:(4150/4208 98.62%)|5s valid_acc:(434/500 86.80%)|0s take:14min remain:11min
+epoch:55/101 loss:0.0876|8s train_acc:(4185/4208 99.45%)|5s valid_acc:(430/500 86.00%)|0s take:15min remain:11min
+epoch:56/101 loss:0.0334|8s train_acc:(4175/4208 99.22%)|5s valid_acc:(438/500 87.60%)|0s take:15min remain:11min
+epoch:57/101 loss:0.0002|8s train_acc:(4199/4208 99.79%)|5s valid_acc:(433/500 86.60%)|0s take:15min remain:10min
+epoch:58/101 loss:0.0000|8s train_acc:(4179/4208 99.31%)|5s valid_acc:(431/500 86.20%)|0s take:15min remain:10min
+epoch:59/101 loss:0.0475|8s train_acc:(4197/4208 99.74%)|5s valid_acc:(439/500 87.80%)|0s take:16min remain:10min
+epoch:60/101 loss:0.0005|8s train_acc:(4190/4208 99.57%)|5s valid_acc:(420/500 84.00%)|0s take:16min remain:10min
+epoch:61/101 loss:0.0002|8s train_acc:(4155/4208 98.74%)|5s valid_acc:(422/500 84.40%)|0s take:16min remain:9min
+epoch:62/101 loss:0.0133|8s train_acc:(4202/4208 99.86%)|5s valid_acc:(440/500 88.00%)|0s take:17min remain:9min
+epoch:63/101 loss:0.0023|8s train_acc:(4188/4208 99.52%)|5s valid_acc:(444/500 88.80%)|0s take:17min remain:9min
+epoch:64/101 loss:0.0000|8s train_acc:(4198/4208 99.76%)|5s valid_acc:(439/500 87.80%)|0s take:17min remain:9min
+epoch:65/101 loss:0.0191|8s train_acc:(4141/4208 98.41%)|5s valid_acc:(418/500 83.60%)|0s take:17min remain:8min
+epoch:66/101 loss:0.2219|8s train_acc:(4190/4208 99.57%)|5s valid_acc:(426/500 85.20%)|0s take:18min remain:8min
+epoch:67/101 loss:0.0236|8s train_acc:(4207/4208 99.98%)|5s valid_acc:(434/500 86.80%)|0s take:18min remain:8min
+epoch:68/101 loss:0.0002|8s train_acc:(4204/4208 99.90%)|5s valid_acc:(430/500 86.00%)|0s take:18min remain:8min
+epoch:69/101 loss:0.0175|8s train_acc:(4208/4208 100.00%)|5s valid_acc:(435/500 87.00%)|0s take:18min remain:8min
+epoch:70/101 loss:0.0283|8s train_acc:(4200/4208 99.81%)|5s valid_acc:(436/500 87.20%)|0s take:19min remain:7min
+epoch:71/101 loss:0.0009|8s train_acc:(4208/4208 100.00%)|5s valid_acc:(444/500 88.80%)|0s take:19min remain:7min
+epoch:72/101 loss:0.0003|8s train_acc:(4132/4208 98.19%)|5s valid_acc:(438/500 87.60%)|0s take:19min remain:7min
+epoch:73/101 loss:0.0005|8s train_acc:(4167/4208 99.03%)|5s valid_acc:(417/500 83.40%)|0s take:20min remain:7min
+epoch:74/101 loss:0.0164|8s train_acc:(4197/4208 99.74%)|5s valid_acc:(436/500 87.20%)|0s take:20min remain:6min
+epoch:75/101 loss:0.0297|8s train_acc:(4123/4208 97.98%)|5s valid_acc:(416/500 83.20%)|0s take:20min remain:6min
+epoch:76/101 loss:0.0241|8s train_acc:(4193/4208 99.64%)|5s valid_acc:(427/500 85.40%)|0s take:20min remain:6min
+epoch:77/101 loss:0.0015|8s train_acc:(4195/4208 99.69%)|5s valid_acc:(443/500 88.60%)|0s take:21min remain:6min
+epoch:78/101 loss:0.0323|8s train_acc:(4204/4208 99.90%)|5s valid_acc:(426/500 85.20%)|0s take:21min remain:5min
+epoch:79/101 loss:0.0369|8s train_acc:(4202/4208 99.86%)|5s valid_acc:(434/500 86.80%)|0s take:21min remain:5min
+epoch:80/101 loss:0.0104|8s train_acc:(4197/4208 99.74%)|5s valid_acc:(445/500 89.00%)|0s take:21min remain:5min
+epoch:81/101 loss:0.0030|8s train_acc:(4157/4208 98.79%)|5s valid_acc:(424/500 84.80%)|0s take:22min remain:5min
+epoch:82/101 loss:0.0020|8s train_acc:(4195/4208 99.69%)|5s valid_acc:(441/500 88.20%)|0s take:22min remain:4min
+epoch:83/101 loss:0.0528|8s train_acc:(4195/4208 99.69%)|5s valid_acc:(439/500 87.80%)|0s take:22min remain:4min
+epoch:84/101 loss:0.0003|8s train_acc:(4197/4208 99.74%)|5s valid_acc:(436/500 87.20%)|0s take:23min remain:4min
+epoch:85/101 loss:0.0000|8s train_acc:(4206/4208 99.95%)|5s valid_acc:(436/500 87.20%)|0s take:23min remain:4min
+epoch:86/101 loss:0.0048|8s train_acc:(4190/4208 99.57%)|5s valid_acc:(438/500 87.60%)|0s take:23min remain:3min
+epoch:87/101 loss:0.0001|8s train_acc:(4206/4208 99.95%)|5s valid_acc:(435/500 87.00%)|0s take:23min remain:3min
+epoch:88/101 loss:0.0036|8s train_acc:(4207/4208 99.98%)|5s valid_acc:(441/500 88.20%)|0s take:24min remain:3min
+epoch:89/101 loss:0.0016|8s train_acc:(4208/4208 100.00%)|5s valid_acc:(430/500 86.00%)|0s take:24min remain:3min
+epoch:90/101 loss:0.0015|8s train_acc:(4208/4208 100.00%)|5s valid_acc:(439/500 87.80%)|0s take:24min remain:2min
+epoch:91/101 loss:0.0002|8s train_acc:(4208/4208 100.00%)|5s valid_acc:(439/500 87.80%)|0s take:24min remain:2min
+epoch:92/101 loss:0.0000|8s train_acc:(4200/4208 99.81%)|5s valid_acc:(436/500 87.20%)|0s take:25min remain:2min
+epoch:93/101 loss:0.0113|8s train_acc:(4192/4208 99.62%)|5s valid_acc:(439/500 87.80%)|0s take:25min remain:2min
+epoch:94/101 loss:0.0437|8s train_acc:(4199/4208 99.79%)|5s valid_acc:(430/500 86.00%)|0s take:25min remain:1min
+epoch:95/101 loss:0.0109|8s train_acc:(4188/4208 99.52%)|5s valid_acc:(442/500 88.40%)|0s take:26min remain:1min
+epoch:96/101 loss:0.0030|8s train_acc:(4204/4208 99.90%)|5s valid_acc:(435/500 87.00%)|0s take:26min remain:1min
+epoch:97/101 loss:0.0006|8s train_acc:(4171/4208 99.12%)|5s valid_acc:(432/500 86.40%)|0s take:26min remain:1min
+epoch:98/101 loss:0.0017|8s train_acc:(4203/4208 99.88%)|5s valid_acc:(438/500 87.60%)|0s take:26min remain:0min
+epoch:99/101 loss:0.0000|8s train_acc:(4207/4208 99.98%)|5s valid_acc:(433/500 86.60%)|0s take:27min remain:0min
+epoch:100/101 loss:0.0001|8s train_acc:(4205/4208 99.93%)|5s valid_acc:(439/500 87.80%)|0s take:27min remain:0min
+epoch:101/101 loss:0.0000|8s train_acc:(4188/4208 99.52%)|5s valid_acc:(439/500 87.80%)|0s take:27min remain:0min
+Inception3
+GPU is on? True
+4208 500
+begin training, length_of_one_mini_batch : 106
+epoch:1/101 loss:3.0755|47s train_acc:(2265/4208 53.83%)|11s valid_acc:(250/500 50.00%)|1s take:1min remain:102min
+epoch:2/101 loss:1.4755|47s train_acc:(2712/4208 64.45%)|11s valid_acc:(299/500 59.80%)|1s take:2min remain:101min
+epoch:3/101 loss:2.5100|47s train_acc:(2835/4208 67.37%)|11s valid_acc:(326/500 65.20%)|1s take:3min remain:100min
+epoch:4/101 loss:1.9339|47s train_acc:(3032/4208 72.05%)|11s valid_acc:(347/500 69.40%)|1s take:4min remain:99min
+epoch:5/101 loss:0.9419|47s train_acc:(3258/4208 77.42%)|11s valid_acc:(361/500 72.20%)|1s take:5min remain:98min
+epoch:6/101 loss:1.1849|47s train_acc:(3342/4208 79.42%)|11s valid_acc:(367/500 73.40%)|1s take:6min remain:97min
+epoch:7/101 loss:4.5045|47s train_acc:(3506/4208 83.32%)|11s valid_acc:(368/500 73.60%)|1s take:7min remain:96min
+epoch:8/101 loss:2.1214|47s train_acc:(3526/4208 83.79%)|11s valid_acc:(388/500 77.60%)|1s take:8min remain:95min
+epoch:9/101 loss:1.6991|47s train_acc:(3666/4208 87.12%)|11s valid_acc:(401/500 80.20%)|1s take:9min remain:94min
+epoch:10/101 loss:0.4746|47s train_acc:(3634/4208 86.36%)|11s valid_acc:(399/500 79.80%)|1s take:10min remain:93min
+epoch:11/101 loss:1.3110|47s train_acc:(3771/4208 89.62%)|11s valid_acc:(408/500 81.60%)|1s take:11min remain:92min
+epoch:12/101 loss:1.4370|47s train_acc:(3816/4208 90.68%)|11s valid_acc:(413/500 82.60%)|1s take:12min remain:90min
+epoch:13/101 loss:3.8225|47s train_acc:(3793/4208 90.14%)|11s valid_acc:(399/500 79.80%)|1s take:13min remain:90min
+epoch:14/101 loss:1.7689|47s train_acc:(3782/4208 89.88%)|11s valid_acc:(420/500 84.00%)|1s take:14min remain:89min
+epoch:15/101 loss:0.5282|47s train_acc:(3882/4208 92.25%)|11s valid_acc:(420/500 84.00%)|1s take:15min remain:88min
+epoch:16/101 loss:2.0035|47s train_acc:(3808/4208 90.49%)|11s valid_acc:(417/500 83.40%)|1s take:17min remain:87min
+epoch:17/101 loss:0.2517|47s train_acc:(3907/4208 92.85%)|11s valid_acc:(416/500 83.20%)|1s take:18min remain:85min
+epoch:18/101 loss:0.6427|47s train_acc:(3900/4208 92.68%)|11s valid_acc:(420/500 84.00%)|1s take:19min remain:84min
+epoch:19/101 loss:2.2630|47s train_acc:(3969/4208 94.32%)|11s valid_acc:(422/500 84.40%)|1s take:20min remain:83min
+epoch:20/101 loss:1.4675|47s train_acc:(3965/4208 94.23%)|11s valid_acc:(433/500 86.60%)|1s take:21min remain:82min
+epoch:21/101 loss:1.7072|47s train_acc:(3965/4208 94.23%)|11s valid_acc:(430/500 86.00%)|1s take:22min remain:81min
+epoch:22/101 loss:2.6917|47s train_acc:(4009/4208 95.27%)|11s valid_acc:(433/500 86.60%)|1s take:23min remain:81min
+epoch:23/101 loss:1.8628|47s train_acc:(4008/4208 95.25%)|11s valid_acc:(431/500 86.20%)|1s take:24min remain:79min
+epoch:24/101 loss:0.2531|47s train_acc:(3927/4208 93.32%)|11s valid_acc:(426/500 85.20%)|1s take:25min remain:78min
+epoch:25/101 loss:0.3889|47s train_acc:(4046/4208 96.15%)|11s valid_acc:(435/500 87.00%)|1s take:26min remain:77min
+epoch:26/101 loss:0.3352|47s train_acc:(4055/4208 96.36%)|11s valid_acc:(434/500 86.80%)|1s take:27min remain:76min
+epoch:27/101 loss:0.1782|47s train_acc:(4082/4208 97.01%)|11s valid_acc:(444/500 88.80%)|1s take:28min remain:75min
+epoch:28/101 loss:2.4416|47s train_acc:(4094/4208 97.29%)|11s valid_acc:(444/500 88.80%)|1s take:29min remain:74min
+epoch:29/101 loss:1.8323|47s train_acc:(3978/4208 94.53%)|11s valid_acc:(432/500 86.40%)|1s take:30min remain:73min
+epoch:30/101 loss:0.1063|47s train_acc:(3999/4208 95.03%)|11s valid_acc:(421/500 84.20%)|1s take:31min remain:72min
+epoch:31/101 loss:1.6328|47s train_acc:(4089/4208 97.17%)|11s valid_acc:(428/500 85.60%)|1s take:33min remain:71min
+epoch:32/101 loss:2.3632|47s train_acc:(4073/4208 96.79%)|11s valid_acc:(430/500 86.00%)|1s take:34min remain:70min
+epoch:33/101 loss:1.3255|47s train_acc:(4088/4208 97.15%)|11s valid_acc:(439/500 87.80%)|1s take:35min remain:69min
+epoch:34/101 loss:1.0205|47s train_acc:(4135/4208 98.27%)|11s valid_acc:(449/500 89.80%)|1s take:36min remain:68min
+epoch:35/101 loss:1.6487|47s train_acc:(4055/4208 96.36%)|11s valid_acc:(435/500 87.00%)|1s take:37min remain:67min
+epoch:36/101 loss:0.0547|47s train_acc:(4154/4208 98.72%)|11s valid_acc:(440/500 88.00%)|1s take:38min remain:66min
+epoch:37/101 loss:0.2420|47s train_acc:(4125/4208 98.03%)|11s valid_acc:(429/500 85.80%)|1s take:39min remain:65min
+epoch:38/101 loss:2.1292|47s train_acc:(4169/4208 99.07%)|11s valid_acc:(447/500 89.40%)|1s take:40min remain:64min
+epoch:39/101 loss:0.0555|47s train_acc:(4087/4208 97.12%)|11s valid_acc:(436/500 87.20%)|1s take:41min remain:63min
+epoch:40/101 loss:1.0424|47s train_acc:(4145/4208 98.50%)|11s valid_acc:(441/500 88.20%)|1s take:42min remain:62min
+epoch:41/101 loss:0.0042|47s train_acc:(4165/4208 98.98%)|11s valid_acc:(440/500 88.00%)|1s take:43min remain:61min
+epoch:42/101 loss:1.7798|47s train_acc:(4151/4208 98.65%)|11s valid_acc:(446/500 89.20%)|1s take:44min remain:60min
+epoch:43/101 loss:0.9401|47s train_acc:(4170/4208 99.10%)|11s valid_acc:(444/500 88.80%)|1s take:45min remain:59min
+epoch:44/101 loss:0.8618|47s train_acc:(4154/4208 98.72%)|11s valid_acc:(443/500 88.60%)|1s take:46min remain:58min
+epoch:45/101 loss:1.3590|47s train_acc:(4179/4208 99.31%)|11s valid_acc:(440/500 88.00%)|1s take:47min remain:57min
+epoch:46/101 loss:0.0117|47s train_acc:(4175/4208 99.22%)|11s valid_acc:(439/500 87.80%)|1s take:49min remain:56min
+epoch:47/101 loss:0.1621|47s train_acc:(4145/4208 98.50%)|11s valid_acc:(449/500 89.80%)|1s take:50min remain:55min
+epoch:48/101 loss:0.1101|47s train_acc:(4160/4208 98.86%)|11s valid_acc:(451/500 90.20%)|1s take:51min remain:54min
+epoch:49/101 loss:0.4495|47s train_acc:(4169/4208 99.07%)|11s valid_acc:(446/500 89.20%)|1s take:52min remain:53min
+epoch:50/101 loss:0.0045|47s train_acc:(4172/4208 99.14%)|11s valid_acc:(449/500 89.80%)|1s take:53min remain:52min
+epoch:51/101 loss:0.0015|47s train_acc:(4172/4208 99.14%)|11s valid_acc:(447/500 89.40%)|1s take:54min remain:51min
+epoch:52/101 loss:0.0868|47s train_acc:(4166/4208 99.00%)|11s valid_acc:(441/500 88.20%)|1s take:55min remain:50min
+epoch:53/101 loss:0.5810|47s train_acc:(4133/4208 98.22%)|11s valid_acc:(441/500 88.20%)|1s take:56min remain:49min
+epoch:54/101 loss:1.6190|47s train_acc:(4154/4208 98.72%)|11s valid_acc:(447/500 89.40%)|1s take:57min remain:48min
+epoch:55/101 loss:1.9862|47s train_acc:(4161/4208 98.88%)|11s valid_acc:(456/500 91.20%)|1s take:58min remain:47min
+epoch:56/101 loss:1.3025|47s train_acc:(4168/4208 99.05%)|11s valid_acc:(455/500 91.00%)|1s take:59min remain:46min
+epoch:57/101 loss:1.0588|47s train_acc:(4151/4208 98.65%)|11s valid_acc:(444/500 88.80%)|1s take:60min remain:45min
+epoch:58/101 loss:0.2614|47s train_acc:(4178/4208 99.29%)|11s valid_acc:(449/500 89.80%)|1s take:61min remain:44min
+epoch:59/101 loss:0.0007|47s train_acc:(4186/4208 99.48%)|11s valid_acc:(453/500 90.60%)|1s take:62min remain:43min
+epoch:60/101 loss:0.0143|47s train_acc:(4189/4208 99.55%)|11s valid_acc:(453/500 90.60%)|1s take:63min remain:42min
+epoch:61/101 loss:0.0458|47s train_acc:(4195/4208 99.69%)|11s valid_acc:(450/500 90.00%)|1s take:65min remain:41min
+epoch:62/101 loss:0.1708|47s train_acc:(4189/4208 99.55%)|11s valid_acc:(452/500 90.40%)|1s take:66min remain:40min
+epoch:63/101 loss:0.5696|47s train_acc:(4187/4208 99.50%)|11s valid_acc:(453/500 90.60%)|1s take:67min remain:39min
+epoch:64/101 loss:0.6847|47s train_acc:(4166/4208 99.00%)|11s valid_acc:(453/500 90.60%)|1s take:68min remain:38min
+epoch:65/101 loss:0.0310|47s train_acc:(4195/4208 99.69%)|11s valid_acc:(452/500 90.40%)|1s take:69min remain:37min
+epoch:66/101 loss:0.0662|47s train_acc:(4197/4208 99.74%)|11s valid_acc:(456/500 91.20%)|1s take:70min remain:36min
+epoch:67/101 loss:0.2571|47s train_acc:(4174/4208 99.19%)|11s valid_acc:(444/500 88.80%)|1s take:71min remain:35min
+epoch:68/101 loss:0.0210|47s train_acc:(4173/4208 99.17%)|11s valid_acc:(445/500 89.00%)|1s take:72min remain:34min
+epoch:69/101 loss:0.0177|47s train_acc:(4140/4208 98.38%)|11s valid_acc:(451/500 90.20%)|1s take:73min remain:33min
+epoch:70/101 loss:0.2343|47s train_acc:(4164/4208 98.95%)|11s valid_acc:(446/500 89.20%)|1s take:74min remain:32min
+epoch:71/101 loss:0.1445|47s train_acc:(4181/4208 99.36%)|11s valid_acc:(445/500 89.00%)|1s take:75min remain:31min
+epoch:72/101 loss:0.2058|47s train_acc:(4183/4208 99.41%)|11s valid_acc:(449/500 89.80%)|1s take:76min remain:30min
+epoch:73/101 loss:0.6671|47s train_acc:(4180/4208 99.33%)|11s valid_acc:(441/500 88.20%)|1s take:77min remain:29min
+epoch:74/101 loss:1.5552|47s train_acc:(4082/4208 97.01%)|11s valid_acc:(438/500 87.60%)|1s take:79min remain:28min
+epoch:75/101 loss:0.4967|47s train_acc:(4197/4208 99.74%)|11s valid_acc:(455/500 91.00%)|1s take:80min remain:27min
+epoch:76/101 loss:0.0294|47s train_acc:(4153/4208 98.69%)|11s valid_acc:(434/500 86.80%)|1s take:81min remain:26min
+epoch:77/101 loss:0.0502|47s train_acc:(4178/4208 99.29%)|11s valid_acc:(439/500 87.80%)|1s take:82min remain:25min
+epoch:78/101 loss:0.0012|47s train_acc:(4182/4208 99.38%)|11s valid_acc:(438/500 87.60%)|1s take:83min remain:24min
+epoch:79/101 loss:3.8252|47s train_acc:(4187/4208 99.50%)|11s valid_acc:(446/500 89.20%)|1s take:84min remain:23min
+epoch:80/101 loss:0.0666|47s train_acc:(4182/4208 99.38%)|11s valid_acc:(442/500 88.40%)|1s take:85min remain:22min
+epoch:81/101 loss:0.0028|47s train_acc:(4186/4208 99.48%)|11s valid_acc:(449/500 89.80%)|1s take:86min remain:21min
+epoch:82/101 loss:0.0753|47s train_acc:(4203/4208 99.88%)|11s valid_acc:(451/500 90.20%)|1s take:87min remain:20min
+epoch:83/101 loss:0.3472|47s train_acc:(4199/4208 99.79%)|11s valid_acc:(455/500 91.00%)|1s take:88min remain:19min
+epoch:84/101 loss:0.0081|47s train_acc:(4200/4208 99.81%)|11s valid_acc:(447/500 89.40%)|1s take:89min remain:18min
+epoch:85/101 loss:0.7884|47s train_acc:(4197/4208 99.74%)|11s valid_acc:(450/500 90.00%)|1s take:90min remain:17min
+epoch:86/101 loss:0.4402|47s train_acc:(4204/4208 99.90%)|11s valid_acc:(450/500 90.00%)|1s take:91min remain:16min
+epoch:87/101 loss:0.0476|47s train_acc:(4177/4208 99.26%)|11s valid_acc:(457/500 91.40%)|1s take:92min remain:15min
+epoch:88/101 loss:0.0013|47s train_acc:(4181/4208 99.36%)|11s valid_acc:(446/500 89.20%)|1s take:93min remain:14min
+epoch:89/101 loss:1.7521|47s train_acc:(4163/4208 98.93%)|11s valid_acc:(449/500 89.80%)|1s take:95min remain:13min
+epoch:90/101 loss:0.6544|47s train_acc:(4186/4208 99.48%)|11s valid_acc:(454/500 90.80%)|1s take:96min remain:12min
+epoch:91/101 loss:0.1418|47s train_acc:(4195/4208 99.69%)|11s valid_acc:(447/500 89.40%)|1s take:97min remain:11min
+epoch:92/101 loss:0.0253|47s train_acc:(4192/4208 99.62%)|11s valid_acc:(454/500 90.80%)|1s take:98min remain:10min
+epoch:93/101 loss:0.8039|47s train_acc:(4200/4208 99.81%)|11s valid_acc:(457/500 91.40%)|1s take:99min remain:9min
+epoch:94/101 loss:0.1331|47s train_acc:(4195/4208 99.69%)|11s valid_acc:(451/500 90.20%)|1s take:100min remain:8min
+epoch:95/101 loss:5.4324|47s train_acc:(4195/4208 99.69%)|11s valid_acc:(449/500 89.80%)|1s take:101min remain:7min
+epoch:96/101 loss:1.0202|47s train_acc:(4196/4208 99.71%)|11s valid_acc:(445/500 89.00%)|1s take:102min remain:6min
+epoch:97/101 loss:1.2668|47s train_acc:(4195/4208 99.69%)|11s valid_acc:(454/500 90.80%)|1s take:103min remain:5min
+epoch:98/101 loss:0.1694|47s train_acc:(4186/4208 99.48%)|11s valid_acc:(452/500 90.40%)|1s take:104min remain:4min
+epoch:99/101 loss:0.8011|47s train_acc:(4191/4208 99.60%)|11s valid_acc:(454/500 90.80%)|1s take:105min remain:3min
+epoch:100/101 loss:0.0097|47s train_acc:(4200/4208 99.81%)|11s valid_acc:(461/500 92.20%)|1s take:106min remain:2min
+epoch:101/101 loss:0.2449|47s train_acc:(4205/4208 99.93%)|11s valid_acc:(452/500 90.40%)|1s take:107min remain:1min
+VGG
+GPU is on? True
+4208 500
+begin training, length_of_one_mini_batch : 106
+Traceback (most recent call last):
+  File "quick_start.py", line 216, in <module>
+    net.train(int(args.epoch))
+  File "quick_start.py", line 167, in train
+    train_correct, train_samples, train_acc = self.check_accuracy(self.sub_train_loader)
+  File "quick_start.py", line 131, in check_accuracy
+    predict = self.model(x_gpu)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torchvision/models/vgg.py", line 42, in forward
+    x = self.features(x)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/modules/container.py", line 92, in forward
+    input = module(input)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 320, in forward
+    self.padding, self.dilation, self.groups)
+RuntimeError: CUDA out of memory. Tried to allocate 490.00 MiB (GPU 1; 5.94 GiB total capacity; 4.76 GiB already allocated; 179.31 MiB free; 522.64 MiB cached)
+112
+AlexNet
+GPU is on? True
+4208 500
+begin training, length_of_one_mini_batch : 106
+Traceback (most recent call last):
+  File "quick_start.py", line 216, in <module>
+    net.train(int(args.epoch))
+  File "quick_start.py", line 164, in train
+    loss = self.train_loss()
+  File "quick_start.py", line 105, in train_loss
+    predict = self.model(x_gpu)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torchvision/models/alexnet.py", line 44, in forward
+    x = x.view(x.size(0), 256 * 6 * 6)
+RuntimeError: shape '[40, 9216]' is invalid for input of size 40960
+Inception3
+GPU is on? True
+4208 500
+begin training, length_of_one_mini_batch : 106
+epoch:1/101 loss:5.5041|17s train_acc:(1603/4208 38.09%)|3s valid_acc:(175/500 35.00%)|0s take:0min remain:36min
+epoch:2/101 loss:4.5774|17s train_acc:(1877/4208 44.61%)|3s valid_acc:(204/500 40.80%)|0s take:0min remain:35min
+epoch:3/101 loss:3.2815|17s train_acc:(2108/4208 50.10%)|3s valid_acc:(235/500 47.00%)|0s take:1min remain:35min
+epoch:4/101 loss:3.4681|17s train_acc:(2379/4208 56.54%)|3s valid_acc:(241/500 48.20%)|0s take:1min remain:35min
+epoch:5/101 loss:3.0250|17s train_acc:(2550/4208 60.60%)|3s valid_acc:(274/500 54.80%)|0s take:1min remain:34min
+epoch:6/101 loss:4.1360|17s train_acc:(2709/4208 64.38%)|3s valid_acc:(297/500 59.40%)|0s take:2min remain:34min
+epoch:7/101 loss:2.9515|16s train_acc:(2883/4208 68.51%)|3s valid_acc:(294/500 58.80%)|0s take:2min remain:33min
+epoch:8/101 loss:2.4367|16s train_acc:(2990/4208 71.06%)|3s valid_acc:(311/500 62.20%)|0s take:2min remain:33min
+epoch:9/101 loss:4.7852|16s train_acc:(3105/4208 73.79%)|3s valid_acc:(322/500 64.40%)|0s take:3min remain:33min
+epoch:10/101 loss:3.0305|16s train_acc:(3211/4208 76.31%)|3s valid_acc:(328/500 65.60%)|0s take:3min remain:32min
+epoch:11/101 loss:1.4241|17s train_acc:(3248/4208 77.19%)|3s valid_acc:(322/500 64.40%)|0s take:4min remain:32min
+epoch:12/101 loss:1.6133|17s train_acc:(3380/4208 80.32%)|3s valid_acc:(331/500 66.20%)|0s take:4min remain:32min
+epoch:13/101 loss:3.6298|16s train_acc:(3485/4208 82.82%)|3s valid_acc:(350/500 70.00%)|0s take:4min remain:31min
+epoch:14/101 loss:1.5295|16s train_acc:(3573/4208 84.91%)|3s valid_acc:(354/500 70.80%)|0s take:5min remain:31min
+epoch:15/101 loss:2.9369|17s train_acc:(3545/4208 84.24%)|3s valid_acc:(355/500 71.00%)|0s take:5min remain:30min
+epoch:16/101 loss:0.7668|16s train_acc:(3687/4208 87.62%)|3s valid_acc:(363/500 72.60%)|0s take:5min remain:30min
+epoch:17/101 loss:3.4937|17s train_acc:(3651/4208 86.76%)|3s valid_acc:(354/500 70.80%)|0s take:6min remain:30min
+epoch:18/101 loss:1.0372|17s train_acc:(3719/4208 88.38%)|3s valid_acc:(362/500 72.40%)|0s take:6min remain:29min
+epoch:19/101 loss:3.3505|17s train_acc:(3756/4208 89.26%)|3s valid_acc:(358/500 71.60%)|0s take:7min remain:29min
+epoch:20/101 loss:4.4742|17s train_acc:(3782/4208 89.88%)|3s valid_acc:(363/500 72.60%)|0s take:7min remain:29min
+epoch:21/101 loss:3.3366|17s train_acc:(3827/4208 90.95%)|3s valid_acc:(378/500 75.60%)|0s take:7min remain:28min
+epoch:22/101 loss:0.5068|17s train_acc:(3850/4208 91.49%)|3s valid_acc:(362/500 72.40%)|0s take:8min remain:28min
+epoch:23/101 loss:0.5131|17s train_acc:(3923/4208 93.23%)|3s valid_acc:(370/500 74.00%)|0s take:8min remain:28min
+epoch:24/101 loss:0.7757|17s train_acc:(3880/4208 92.21%)|3s valid_acc:(368/500 73.60%)|0s take:8min remain:27min
+epoch:25/101 loss:1.3081|17s train_acc:(3922/4208 93.20%)|3s valid_acc:(364/500 72.80%)|0s take:9min remain:27min
+epoch:26/101 loss:0.6201|17s train_acc:(3955/4208 93.99%)|3s valid_acc:(377/500 75.40%)|0s take:9min remain:27min
+epoch:27/101 loss:2.8424|17s train_acc:(3968/4208 94.30%)|3s valid_acc:(384/500 76.80%)|0s take:10min remain:26min
+epoch:28/101 loss:2.4863|17s train_acc:(4031/4208 95.79%)|3s valid_acc:(390/500 78.00%)|0s take:10min remain:26min
+epoch:29/101 loss:1.8374|17s train_acc:(3980/4208 94.58%)|3s valid_acc:(390/500 78.00%)|0s take:10min remain:25min
+epoch:30/101 loss:0.7266|17s train_acc:(3916/4208 93.06%)|3s valid_acc:(386/500 77.20%)|0s take:11min remain:25min
+epoch:31/101 loss:1.0621|17s train_acc:(4026/4208 95.67%)|3s valid_acc:(393/500 78.60%)|0s take:11min remain:25min
+epoch:32/101 loss:1.4075|17s train_acc:(3995/4208 94.94%)|3s valid_acc:(385/500 77.00%)|0s take:11min remain:24min
+epoch:33/101 loss:1.9492|17s train_acc:(4066/4208 96.63%)|3s valid_acc:(384/500 76.80%)|0s take:12min remain:24min
+epoch:34/101 loss:1.4600|17s train_acc:(4072/4208 96.77%)|3s valid_acc:(392/500 78.40%)|0s take:12min remain:24min
+epoch:35/101 loss:2.4518|17s train_acc:(3998/4208 95.01%)|3s valid_acc:(371/500 74.20%)|0s take:13min remain:23min
+epoch:36/101 loss:3.8525|17s train_acc:(3986/4208 94.72%)|3s valid_acc:(395/500 79.00%)|0s take:13min remain:23min
+epoch:37/101 loss:0.1732|17s train_acc:(4026/4208 95.67%)|3s valid_acc:(401/500 80.20%)|0s take:13min remain:23min
+epoch:38/101 loss:0.9797|17s train_acc:(3945/4208 93.75%)|3s valid_acc:(377/500 75.40%)|0s take:14min remain:22min
+epoch:39/101 loss:3.2332|17s train_acc:(4142/4208 98.43%)|3s valid_acc:(399/500 79.80%)|0s take:14min remain:22min
+epoch:40/101 loss:1.2339|17s train_acc:(4113/4208 97.74%)|3s valid_acc:(397/500 79.40%)|0s take:14min remain:22min
+epoch:41/101 loss:0.0307|17s train_acc:(4067/4208 96.65%)|3s valid_acc:(393/500 78.60%)|0s take:15min remain:21min
+epoch:42/101 loss:0.9559|16s train_acc:(4137/4208 98.31%)|3s valid_acc:(417/500 83.40%)|0s take:15min remain:21min
+epoch:43/101 loss:2.4556|17s train_acc:(4160/4208 98.86%)|3s valid_acc:(405/500 81.00%)|0s take:16min remain:21min
+epoch:44/101 loss:1.7667|17s train_acc:(4159/4208 98.84%)|3s valid_acc:(397/500 79.40%)|0s take:16min remain:20min
+epoch:45/101 loss:0.4083|17s train_acc:(4158/4208 98.81%)|3s valid_acc:(409/500 81.80%)|0s take:16min remain:20min
+epoch:46/101 loss:1.0848|17s train_acc:(4160/4208 98.86%)|3s valid_acc:(410/500 82.00%)|0s take:17min remain:19min
+epoch:47/101 loss:3.7210|17s train_acc:(4121/4208 97.93%)|3s valid_acc:(396/500 79.20%)|0s take:17min remain:19min
+epoch:48/101 loss:0.7068|17s train_acc:(4135/4208 98.27%)|3s valid_acc:(405/500 81.00%)|0s take:17min remain:19min
+epoch:49/101 loss:1.1696|17s train_acc:(4101/4208 97.46%)|3s valid_acc:(402/500 80.40%)|0s take:18min remain:18min
+epoch:50/101 loss:0.7034|17s train_acc:(4177/4208 99.26%)|3s valid_acc:(403/500 80.60%)|0s take:18min remain:18min
+epoch:51/101 loss:0.8050|17s train_acc:(4136/4208 98.29%)|3s valid_acc:(403/500 80.60%)|0s take:19min remain:18min
+epoch:52/101 loss:1.9497|16s train_acc:(4151/4208 98.65%)|3s valid_acc:(419/500 83.80%)|0s take:19min remain:17min
+epoch:53/101 loss:1.3212|16s train_acc:(4174/4208 99.19%)|3s valid_acc:(413/500 82.60%)|0s take:19min remain:17min
+epoch:54/101 loss:1.6482|16s train_acc:(4169/4208 99.07%)|3s valid_acc:(411/500 82.20%)|0s take:20min remain:17min
+epoch:55/101 loss:1.6587|16s train_acc:(4151/4208 98.65%)|3s valid_acc:(412/500 82.40%)|0s take:20min remain:16min
+epoch:56/101 loss:0.9976|17s train_acc:(4101/4208 97.46%)|3s valid_acc:(404/500 80.80%)|0s take:20min remain:16min
+epoch:57/101 loss:2.2685|16s train_acc:(4097/4208 97.36%)|3s valid_acc:(411/500 82.20%)|0s take:21min remain:15min
+epoch:58/101 loss:0.3269|17s train_acc:(4186/4208 99.48%)|3s valid_acc:(404/500 80.80%)|0s take:21min remain:15min
+epoch:59/101 loss:0.0479|17s train_acc:(4177/4208 99.26%)|3s valid_acc:(419/500 83.80%)|0s take:22min remain:15min
+epoch:60/101 loss:5.9011|17s train_acc:(4162/4208 98.91%)|3s valid_acc:(414/500 82.80%)|0s take:22min remain:14min
+epoch:61/101 loss:4.5452|17s train_acc:(4166/4208 99.00%)|3s valid_acc:(415/500 83.00%)|0s take:22min remain:14min
+epoch:62/101 loss:0.5971|17s train_acc:(4168/4208 99.05%)|3s valid_acc:(421/500 84.20%)|0s take:23min remain:14min
+epoch:63/101 loss:1.3734|17s train_acc:(4163/4208 98.93%)|3s valid_acc:(413/500 82.60%)|0s take:23min remain:13min
+epoch:64/101 loss:0.0800|17s train_acc:(4188/4208 99.52%)|3s valid_acc:(408/500 81.60%)|0s take:23min remain:13min
+epoch:65/101 loss:0.0657|17s train_acc:(4194/4208 99.67%)|3s valid_acc:(414/500 82.80%)|0s take:24min remain:13min
+epoch:66/101 loss:0.3174|17s train_acc:(4181/4208 99.36%)|3s valid_acc:(408/500 81.60%)|0s take:24min remain:12min
+epoch:67/101 loss:0.5425|17s train_acc:(4184/4208 99.43%)|3s valid_acc:(419/500 83.80%)|0s take:25min remain:12min
+epoch:68/101 loss:4.1300|17s train_acc:(4189/4208 99.55%)|3s valid_acc:(416/500 83.20%)|0s take:25min remain:12min
+epoch:69/101 loss:0.0448|17s train_acc:(4167/4208 99.03%)|3s valid_acc:(408/500 81.60%)|0s take:25min remain:11min
+epoch:70/101 loss:0.6912|17s train_acc:(4187/4208 99.50%)|3s valid_acc:(415/500 83.00%)|0s take:26min remain:11min
+epoch:71/101 loss:1.4810|17s train_acc:(4168/4208 99.05%)|3s valid_acc:(412/500 82.40%)|0s take:26min remain:11min
+epoch:72/101 loss:1.1508|17s train_acc:(4169/4208 99.07%)|3s valid_acc:(416/500 83.20%)|0s take:26min remain:10min
+epoch:73/101 loss:0.6109|17s train_acc:(4191/4208 99.60%)|3s valid_acc:(418/500 83.60%)|0s take:27min remain:10min
+epoch:74/101 loss:0.9758|17s train_acc:(4167/4208 99.03%)|3s valid_acc:(411/500 82.20%)|0s take:27min remain:9min
+epoch:75/101 loss:1.4555|17s train_acc:(4179/4208 99.31%)|3s valid_acc:(417/500 83.40%)|0s take:28min remain:9min
+epoch:76/101 loss:0.0297|17s train_acc:(4126/4208 98.05%)|3s valid_acc:(411/500 82.20%)|0s take:28min remain:9min
+epoch:77/101 loss:0.6525|17s train_acc:(4184/4208 99.43%)|3s valid_acc:(406/500 81.20%)|0s take:28min remain:8min
+epoch:78/101 loss:0.0659|17s train_acc:(4193/4208 99.64%)|3s valid_acc:(422/500 84.40%)|0s take:29min remain:8min
+epoch:79/101 loss:0.0553|17s train_acc:(4195/4208 99.69%)|3s valid_acc:(429/500 85.80%)|0s take:29min remain:8min
+epoch:80/101 loss:1.2833|17s train_acc:(4200/4208 99.81%)|3s valid_acc:(410/500 82.00%)|0s take:29min remain:7min
+epoch:81/101 loss:0.6176|17s train_acc:(4183/4208 99.41%)|3s valid_acc:(410/500 82.00%)|0s take:30min remain:7min
+epoch:82/101 loss:0.5025|17s train_acc:(4191/4208 99.60%)|3s valid_acc:(410/500 82.00%)|0s take:30min remain:7min
+epoch:83/101 loss:0.0886|17s train_acc:(4185/4208 99.45%)|3s valid_acc:(426/500 85.20%)|0s take:31min remain:6min
+epoch:84/101 loss:2.7169|17s train_acc:(4190/4208 99.57%)|3s valid_acc:(419/500 83.80%)|0s take:31min remain:6min
+epoch:85/101 loss:4.0285|17s train_acc:(4198/4208 99.76%)|3s valid_acc:(427/500 85.40%)|0s take:31min remain:6min
+epoch:86/101 loss:2.1090|17s train_acc:(4189/4208 99.55%)|3s valid_acc:(421/500 84.20%)|0s take:32min remain:5min
+epoch:87/101 loss:0.9538|17s train_acc:(4169/4208 99.07%)|3s valid_acc:(415/500 83.00%)|0s take:32min remain:5min
+epoch:88/101 loss:3.4669|17s train_acc:(4197/4208 99.74%)|3s valid_acc:(428/500 85.60%)|0s take:32min remain:4min
+epoch:89/101 loss:2.6415|17s train_acc:(4192/4208 99.62%)|3s valid_acc:(422/500 84.40%)|0s take:33min remain:4min
+epoch:90/101 loss:0.0984|17s train_acc:(4196/4208 99.71%)|3s valid_acc:(415/500 83.00%)|0s take:33min remain:4min
+epoch:91/101 loss:0.0862|17s train_acc:(4207/4208 99.98%)|3s valid_acc:(420/500 84.00%)|0s take:34min remain:3min
+epoch:92/101 loss:0.3483|17s train_acc:(4186/4208 99.48%)|3s valid_acc:(422/500 84.40%)|0s take:34min remain:3min
+epoch:93/101 loss:0.4212|17s train_acc:(4196/4208 99.71%)|3s valid_acc:(413/500 82.60%)|0s take:34min remain:3min
+epoch:94/101 loss:0.9475|17s train_acc:(4201/4208 99.83%)|3s valid_acc:(425/500 85.00%)|0s take:35min remain:2min
+epoch:95/101 loss:0.9149|17s train_acc:(4190/4208 99.57%)|3s valid_acc:(417/500 83.40%)|0s take:35min remain:2min
+epoch:96/101 loss:1.5273|17s train_acc:(4172/4208 99.14%)|3s valid_acc:(425/500 85.00%)|0s take:35min remain:2min
+epoch:97/101 loss:0.0791|17s train_acc:(4195/4208 99.69%)|3s valid_acc:(416/500 83.20%)|0s take:36min remain:1min
+epoch:98/101 loss:1.6624|17s train_acc:(4182/4208 99.38%)|3s valid_acc:(426/500 85.20%)|0s take:36min remain:1min
+epoch:99/101 loss:0.0107|16s train_acc:(4179/4208 99.31%)|3s valid_acc:(427/500 85.40%)|0s take:37min remain:1min
+epoch:100/101 loss:0.4309|16s train_acc:(4177/4208 99.26%)|3s valid_acc:(428/500 85.60%)|0s take:37min remain:0min
+epoch:101/101 loss:0.0807|16s train_acc:(4197/4208 99.74%)|3s valid_acc:(425/500 85.00%)|0s take:37min remain:0min
+VGG
+GPU is on? True
+4208 500
+begin training, length_of_one_mini_batch : 106
+Traceback (most recent call last):
+  File "quick_start.py", line 216, in <module>
+    net.train(int(args.epoch))
+  File "quick_start.py", line 164, in train
+    loss = self.train_loss()
+  File "quick_start.py", line 105, in train_loss
+    predict = self.model(x_gpu)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torchvision/models/vgg.py", line 44, in forward
+    x = self.classifier(x)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/modules/container.py", line 92, in forward
+    input = module(input)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 67, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/functional.py", line 1352, in linear
+    ret = torch.addmm(torch.jit._unwrap_optional(bias), input, weight.t())
+RuntimeError: size mismatch, m1: [40 x 4608], m2: [25088 x 4096] at /opt/conda/conda-bld/pytorch_1544176307774/work/aten/src/THC/generic/THCTensorMathBlas.cu:266
+56
+AlexNet
+GPU is on? True
+4208 500
+begin training, length_of_one_mini_batch : 106
+Traceback (most recent call last):
+  File "quick_start.py", line 216, in <module>
+    net.train(int(args.epoch))
+  File "quick_start.py", line 164, in train
+    loss = self.train_loss()
+  File "quick_start.py", line 105, in train_loss
+    predict = self.model(x_gpu)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torchvision/models/alexnet.py", line 44, in forward
+    x = x.view(x.size(0), 256 * 6 * 6)
+RuntimeError: shape '[40, 9216]' is invalid for input of size 10240
+Inception3
+GPU is on? True
+4208 500
+begin training, length_of_one_mini_batch : 106
+Traceback (most recent call last):
+  File "quick_start.py", line 216, in <module>
+    net.train(int(args.epoch))
+  File "quick_start.py", line 164, in train
+    loss = self.train_loss()
+  File "quick_start.py", line 105, in train_loss
+    predict = self.model(x_gpu)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torchvision/models/inception.py", line 111, in forward
+    x = self.Mixed_7a(x)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torchvision/models/inception.py", line 238, in forward
+    branch3x3 = self.branch3x3_2(branch3x3)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torchvision/models/inception.py", line 325, in forward
+    x = self.conv(x)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 320, in forward
+    self.padding, self.dilation, self.groups)
+RuntimeError: cuDNN error: CUDNN_STATUS_BAD_PARAM
+VGG
+GPU is on? True
+4208 500
+begin training, length_of_one_mini_batch : 106
+Traceback (most recent call last):
+  File "quick_start.py", line 216, in <module>
+    net.train(int(args.epoch))
+  File "quick_start.py", line 164, in train
+    loss = self.train_loss()
+  File "quick_start.py", line 105, in train_loss
+    predict = self.model(x_gpu)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torchvision/models/vgg.py", line 44, in forward
+    x = self.classifier(x)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/modules/container.py", line 92, in forward
+    input = module(input)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/modules/module.py", line 489, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 67, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/home/s1838362/miniconda3/envs/mlp/lib/python3.7/site-packages/torch/nn/functional.py", line 1352, in linear
+    ret = torch.addmm(torch.jit._unwrap_optional(bias), input, weight.t())
+RuntimeError: size mismatch, m1: [40 x 512], m2: [25088 x 4096] at /opt/conda/conda-bld/pytorch_1544176307774/work/aten/src/THC/generic/THCTensorMathBlas.cu:266
