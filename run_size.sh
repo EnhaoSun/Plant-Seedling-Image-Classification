@@ -39,13 +39,7 @@ source /home/${STUDENT_ID}/miniconda3/bin/activate mlp
 image_size=(224 112 56)
 model=("AlexNet" "Inception3" "VGG")
 
-for s in "${image_size[@]}"
-do
-	echo $s
-	for m in "${model[@]}"
-	do
-		echo $m
-		python quick_start.py --model_name $m --size $s --epoch 101
-	done
+for m in "${model[@]}"; do
+	python quick_start.py --model_name $m --size $s --epoch 101
 done
 
