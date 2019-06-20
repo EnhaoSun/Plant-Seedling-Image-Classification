@@ -28,4 +28,14 @@ The following experiments were run, based on three models:AlexNet, Inception V3 
 2. AlexNet, Inception V3, VGG16)+standardization3.  
 3. (AlexNet, Inception V3, VGG16)+Gray scaling
 
+### Experiment result
+#### Experiment 1
+
+| Models | Best test\_acc $\pm$ one standard deviations |
+| -----  | ----- |
+
+#### Experiment 2
+
+#### Experiment 3
+
 
