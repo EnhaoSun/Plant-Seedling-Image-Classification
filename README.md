@@ -7,17 +7,18 @@ This project aims to explore the performance of dif-ferent CNN models in plant s
 The dataset that used in this researchcontains approximately 960 unit plants belonging to 12 species at several growth stages.
 The dataset is hosted by Aarhus University ([here](https://vision.eng.au.dk/plant-seedlings-dataset/)). This dataset is also used for Benchmark of Plant Seedling Classification Algorithms ([Quick link to the paper](https://arxiv.org/abs/1711.05458))
 
-There are 794 images in the test datasetand 4750 images are remained for training and validationdataset. To simulate the test dataset, we choose 794 imagesas our validation dataset which means the training datasethas 3956 images. The input image size for CNN is 224*224,it means we need to resize all images to this size.
-
+There are 794 images in the test datasetand 4750 images are remained for training and validationdataset. To simulate the test dataset, we choose 794 imagesas our validation dataset which means the training datasethas 3956 images. 
 | Data sets | Number of Images |
 | :---------: | :----------------: |
 | Traning Set | 3956 |
 | Validation Set | 794 |
 | Test Set | 794 |
 
-See example image as below:
+The input image size for CNN is 224*224,it means we need to resize all images to this size. See example image as below:
 
-![](plant_img.png)
+<p align="center">
+  <img src="plant_img.png">
+</p>
 
 ## CNN Models
 The CNN models applied in this project includes ALexNet,VGG and GoogLeNet. 
