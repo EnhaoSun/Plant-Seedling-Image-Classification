@@ -17,6 +17,7 @@ We compare the test ac-curacy of each CNN models in our dataset and the conclusi
 
 ### Normalization
 We tried two approaches for normalization:
+
 1.Gray Scaling: The images are changed to greyscale
 2.Channel  Standardization:For each channel, the pixel values are standardized to 0 mean and unit vari-ance. As a result, all inputs can be in a similar range of values.
 
