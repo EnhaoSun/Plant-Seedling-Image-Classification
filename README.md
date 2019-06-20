@@ -3,6 +3,9 @@
 ## Aim
 This project aims to explore the performance of different CNN models in plant seedling image clas-sification.
 
+## Tools
+Pytorch
+
 ## Data set
 The dataset that used in this researchcontains approximately 960 unit plants belonging to 12 species at several growth stages.
 The dataset is hosted by Aarhus University ([here](https://vision.eng.au.dk/plant-seedlings-dataset/)). This dataset is also used for Benchmark of Plant Seedling Classification Algorithms ([Quick link to the paper](https://arxiv.org/abs/1711.05458))
