@@ -49,8 +49,8 @@ The following experiments were run, based on three models:AlexNet, Inception V3 
 
 | Models | Best test\_acc ± one standard deviations |
 | -----  | :-----: |
-| AlexNet | 76.53\% ± 0.83\% |
-| Inception V3 | 75.81\% ± 0.92\% |
-| VGG16 | 74.83\% ± 0.56\% |
+| AlexNet | 77.02\% ± 1.71\% |
+| Inception V3 | 70.41\% ± 1.48\% |
+| VGG16 | 75.13\% ± 2.12\% |
 
 
