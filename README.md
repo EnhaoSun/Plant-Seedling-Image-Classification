@@ -1,7 +1,7 @@
 # Plant Seedling image classification
 
 ## Aim
-This project aims to explore the performance of different CNN models in plant seedling image clas-sification.
+This project aims to explore the performance of different CNN models in plant seedling image classification.
 
 ## Tools
 Pytorch
@@ -41,8 +41,8 @@ We tried two approaches for normalization:
 The following experiments were run, based on three models:AlexNet, Inception V3 and VGG161. 
 
 1. AlexNet, Inception V3, VGG162.  
-2. AlexNet, Inception V3, VGG16)+standardization3.  
-3. (AlexNet, Inception V3, VGG16)+Gray scaling
+2. (AlexNet, Inception V3, VGG16) + standardization3.  
+3. (AlexNet, Inception V3, VGG16) + Gray scaling
 
 ### Experiment result
 #### Experiment 1
