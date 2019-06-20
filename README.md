@@ -1,7 +1,7 @@
 # Plant Seedling image classification
 
 ## Aim
-This project aims to explore the performance of dif-ferent CNN models in plant seedling image clas-sification.
+This project aims to explore the performance of different CNN models in plant seedling image clas-sification.
 
 ## Data set
 The dataset that used in this researchcontains approximately 960 unit plants belonging to 12 species at several growth stages.
